@@ -7,7 +7,7 @@ h1{
 }
 
 p, span, div ol, ul, a{
-  @apply font-semibold
+  @apply font-medium
 }
 
 /* Hamberger */

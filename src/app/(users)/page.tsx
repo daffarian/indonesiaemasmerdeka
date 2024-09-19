@@ -6,11 +6,11 @@ export default function Home() {
     <>
       <section className="">
         <div className="container">
-          <img className="py-12" src="/images/hero.webp" alt="logo" />
+          <img className="mb-5" src="/images/hero.webp" alt="logo" />
           <h1>
             Wujudkan Program <br /> Keberlanjutan <br />
             <FlipWordsDemo
-              className="px-0 text-amber-500 text-3xl font-extrabold"
+              className="px-0 text-primary text-3xl !font-extrabold"
               words={["Kesehatan", "Pendidikan", "UMKM", "Lingkungan"]}
             />
           </h1>
