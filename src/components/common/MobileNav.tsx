@@ -1,10 +1,9 @@
 import MenuIcon from "../icons/MenuIcon";
+import Hamburger from "./Humberger";
 export default function MobileNav() {
   return (
     <nav className="">
-      <button>
-        <MenuIcon className="w-5 h-5 text-primary" />
-      </button>
+        <Hamburger />
     </nav>
   );
 }
