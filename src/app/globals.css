@@ -2,20 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-h1{
-  @apply text-3xl font-extrabold
+h1 {
+  @apply text-3xl font-extrabold;
 }
 
-h2{
-  @apply text-xl font-bold
+h2 {
+  @apply text-xl font-bold;
 }
 
-p, span, div ol, ul, a{
-  @apply font-medium
+h3 {
+  @apply text-lg font-bold;
 }
+
+/* p,
+span,
+div ol,
+ul,
+a {
+  @apply font-medium;
+} */
 
 /* Hamberger */
-/* From Uiverse.io by AKAspidey01 */ 
+/* From Uiverse.io by AKAspidey01 */
 .checkboxtoggler {
   width: 1.5em;
   display: flex;
