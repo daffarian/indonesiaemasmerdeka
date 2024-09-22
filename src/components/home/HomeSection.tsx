@@ -14,7 +14,7 @@ export default function HomeSection({ className }: { className?: string }) {
           Wujudkan Program <br /> Keberlanjutan <br />
           {/* Pillar */}
           <FlipWordsDemo
-            className="px-0 text-primary text-3xl !font-extrabold"
+            className="px-0 text-yellow-500 text-3xl !font-extrabold"
             words={["Kesehatan", "Pendidikan", "UMKM", "Lingkungan"]}
           />
         </h1>
