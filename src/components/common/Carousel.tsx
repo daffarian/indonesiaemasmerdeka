@@ -23,37 +23,76 @@ export default function CommonCarousel() {
   };
   return (
     <Carousel
-      swipeable={true}
-      draggable={false}
-      showDots={true}
-      responsive={responsive}
-      ssr={true} // means to render carousel on server-side.
-      infinite={true}
-      // autoPlay={this.props.deviceType !== "mobile" ? true : false}
-      autoPlay={true}
+      additionalTransfrom={0}
+      arrows={false}
+      autoPlay
       autoPlaySpeed={5000}
-      keyBoardControl={true}
-      customTransition="all .5"
-      transitionDuration={500}
-      containerClass="carousel-container"
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      // deviceType={this.props.deviceType}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-      renderButtonGroupOutside={true}
-      renderDotsOutside={true}
+      centerMode={false}
+      className=""
+      containerClass="container-with-dots"
+      dotListClass=""
+      draggable={false}
+      focusOnSelect={false}
+      infinite
+      itemClass=""
+      keyBoardControl
+      minimumTouchDrag={80}
+      pauseOnHover
+      renderArrowsWhenDisabled={false}
+      renderButtonGroupOutside={false}
+      renderDotsOutside={false}
+      responsive={{
+        desktop: {
+          breakpoint: {
+            max: 3000,
+            min: 1024,
+          },
+          items: 3,
+          partialVisibilityGutter: 40,
+        },
+        mobile: {
+          breakpoint: {
+            max: 464,
+            min: 0,
+          },
+          items: 1,
+          partialVisibilityGutter: 30,
+        },
+        tablet: {
+          breakpoint: {
+            max: 1024,
+            min: 464,
+          },
+          items: 2,
+          partialVisibilityGutter: 30,
+        },
+      }}
+      rewind={false}
+      rewindWithAnimation={false}
+      rtl={false}
+      shouldResetAutoplay
+      showDots={false}
+      sliderClass=""
+      slidesToSlide={2}
+      swipeable
     >
       <div>
-        <Author />
+        <img
+          src="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+          alt="img"
+        />
       </div>
       <div>
-        <Author />
+        <img
+          src="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+          alt="img"
+        />
       </div>
       <div>
-        <Author />
-      </div>
-      <div>
-        <Author />
+        <img
+          src="https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+          alt="img"
+        />
       </div>
     </Carousel>
   );

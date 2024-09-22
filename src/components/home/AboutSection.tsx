@@ -14,7 +14,7 @@ export default function AboutSection({ className }: { className?: string }) {
             ekonomi, dan sosial.
           </p>
         </div>
-        <div className="text-center container bg-primary text-zinc-800 py-10">
+        <div className="text-center container text-zinc-800 py-10">
           <h2 className="text-black">Berikan Dampak Perubahan</h2>
           <p className="mt-5">
             Program berkelanjutan yang dijalankan sudah memberikan manfaat luas.
@@ -23,7 +23,7 @@ export default function AboutSection({ className }: { className?: string }) {
           <Link
             href={"/"}
             className={
-              "px-3 py-2 mt-6 inline-flex rounded-lg bg-white text-primary font-medium hover:shadow-lg transition-all"
+              "px-3 py-2 mt-6 inline-flex rounded-lg bg-primary text-white font-medium hover:shadow-lg transition-all"
             }
           >
             Hubungi Kami
