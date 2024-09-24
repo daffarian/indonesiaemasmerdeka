@@ -26,7 +26,9 @@ const config = {
     extend: {
       colors: {
         primary: "#dab96b",
-        secondary: "#cc9921",
+        secondary: "#f9d99a",
+        accent: "#e76b3c",
+        'dark-gray': "#333333",
       },
       keyframes: {
         "accordion-down": {
