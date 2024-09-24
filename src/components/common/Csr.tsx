@@ -59,7 +59,7 @@ export default function Csr({ className }: { className?: string }) {
                   name="email"
                   id="email"
                   placeholder="Masukan email perusahaan"
-                  className="rounded-lg py-3 px-3 focus:outline-none placeholder:text-sm"
+                  className="rounded-lg py-4 px-3 focus:outline-none placeholder:text-sm"
                 />
               </div>
               {/* Email Stop */}
@@ -76,7 +76,7 @@ export default function Csr({ className }: { className?: string }) {
                   name="phone"
                   id="phone"
                   placeholder="Masukan nomor aktif"
-                  className="rounded-lg py-3 px-3 focus:outline-none placeholder:text-sm"
+                  className="rounded-lg py-4 px-3 focus:outline-none placeholder:text-sm"
                 />
               </div>
               {/* Phone Stop */}
@@ -91,8 +91,8 @@ export default function Csr({ className }: { className?: string }) {
                 <textarea
                   name="message"
                   id="message"
-                  placeholder="Contoh : Program tanam mangrove di pesisir pantai."
-                  className="rounded-lg py-3 px-3 focus:outline-none placeholder:text-sm"
+                  placeholder="Contoh : Program tanam mangrove di pesisir pantai"
+                  className="rounded-lg py-4 px-3 focus:outline-none placeholder:text-sm"
                   rows={5}
                 />
               </div>
