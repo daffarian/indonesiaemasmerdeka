@@ -27,6 +27,7 @@ export default function ServicesSection({ className }: { className?: string }) {
             </div>
             <div className="bg-gradient-to-r from-white to-white/30 via-white w-full h-full absolute inset-0 rounded-3xl"></div>
           </div>
+          
           {/* Donatioan Stop */}
 
           {/* Edication Start */}
