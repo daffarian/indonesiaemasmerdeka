@@ -5,7 +5,7 @@ export default function AboutSection({ className }: { className?: string }) {
   return (
     <section className={`${className}`}>
       <div className="">
-        <div className="container py-10 bg-secondary text-zinc-800">
+        <div className="container py-10 bg-amber-50 text-zinc-800">
           <h2 className="">yayasanindonesiaemas.com</h2>
           <div className="bg-white flex items-center justify-center p-4 rounded-full h-32 w-32 mx-auto my-3">
             <Author className="w-28 my-7 mx-auto" />

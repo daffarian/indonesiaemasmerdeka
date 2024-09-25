@@ -4,7 +4,7 @@ import { FlipWordsDemo } from "@/components/common/FlipWords";
 export default function HomeSection({ className }: { className?: string }) {
   return (
     <section
-      className={`${className} pb-10 pt-20 bg-[url('https://img.freepik.com/free-vector/white-abstract-wallpaper_23-2148830027.jpg?t=st=1727242884~exp=1727246484~hmac=b1cb9b35ca2c5c109922e0f59513d103fc3c6d54052734e0062fe45a7e8ac3d7&w=996')]`}
+      className={`${className} pb-10 pt-20 `}
     >
       <div className="container">
         <h1 className="py-10 text-zinc-800">
