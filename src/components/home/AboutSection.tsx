@@ -5,12 +5,12 @@ export default function AboutSection({ className }: { className?: string }) {
   return (
     <section className={`${className}`}>
       <div className="">
-        <div className="container py-10 bg-zinc-800">
-          <h2 className="text-zinc-200">Yayasan Indonesia Emas Merdeka</h2>
-          {/* <div className="bg-white flex items-center justify-center p-2 rounded-full h-32 w-32 mx-auto my-3"> */}
+        <div className="container py-10 bg-secondary text-zinc-800">
+          <h2 className="">yayasanindonesiaemas.com</h2>
+          <div className="bg-white flex items-center justify-center p-4 rounded-full h-32 w-32 mx-auto my-3">
             <Author className="w-28 my-7 mx-auto" />
-          {/* </div> */}
-          <p className="mt-5 text-zinc-200">
+          </div>
+          <p className="mt-5 text-zinc-800">
             Kolaborasi program yang dijalankan akan mampu berdampak secara
             berkelanjutan, dengan fokus pada tiga aspek utama, yaitu lingkungan,
             ekonomi, dan sosial.

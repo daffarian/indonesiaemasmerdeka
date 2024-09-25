@@ -8,15 +8,15 @@ export default function Csr({ className }: { className?: string }) {
       <div className="">
         <div className="">
           {/* Contact Start */}
-          <div className="container py-10 bg-zinc-800">
-            <p className="text-lg text-white font-bold">
+          <div className="container py-10 bg-secondary">
+            <p className="text-lg text-zinc-800 font-bold">
               Siap Kolaborasi Membawa Perubahan Melalui Program Berkelanjutan ?
             </p>
-            <p className="text-white font-bold my-5">Hubungi Kami</p>
+            <p className="text-zinc-800 font-bold my-5">Hubungi Kami</p>
             <div className="flex flex-col gap-5">
               {/* Whatsapp Start */}
               <Link href={"/"}>
-                <div className="flex flex-row gap-3 items-center text-white py-5 px-3 border-white border rounded-lg">
+                <div className="flex flex-row gap-3 items-center text-zinc-800 py-5 px-3 border-zinc-800 border rounded-lg">
                   <div className="inline-flex justify-center items-center p-3 rounded-full bg-green-500">
                     <WaIcon className="w-8 h-8" />
                   </div>
@@ -29,7 +29,7 @@ export default function Csr({ className }: { className?: string }) {
               {/* Whatsapp Stop */}
               {/* Email Start */}
               <Link href={"/"}>
-                <div className="flex flex-row gap-3 items-center text-white py-5 px-3 border-white border rounded-lg">
+                <div className="flex flex-row gap-3 items-center text-zinc-800 py-5 px-3 border-zinc-800 border rounded-lg">
                   <div className="inline-flex justify-center items-center p-3 rounded-full bg-red-500">
                     <EmailIcon className="w-8 h-8" />
                   </div>
