@@ -40,7 +40,7 @@ export default function ServicesSection({ className }: { className?: string }) {
                   max: 3000,
                   min: 1024,
                 },
-                items: 3,
+                items: 1,
                 partialVisibilityGutter: 40,
               },
               mobile: {
@@ -56,7 +56,7 @@ export default function ServicesSection({ className }: { className?: string }) {
                   max: 1024,
                   min: 464,
                 },
-                items: 2,
+                items: 1,
                 partialVisibilityGutter: 30,
               },
             }}
@@ -66,11 +66,11 @@ export default function ServicesSection({ className }: { className?: string }) {
             shouldResetAutoplay
             showDots={true}
             sliderClass=""
-            slidesToSlide={2}
+            slidesToSlide={1}
             swipeable
           >
             {/* Donatioan Start */}
-            <div className="bg-[url('https://img.freepik.com/free-vector/hand-drawn-clothing-donation-illustration_23-2148814803.jpg?t=st=1727180878~exp=1727184478~hmac=e25561946bd0e5851d8038f2aff64ba4fb17fafd70b1f14ab93601a74c88b3cd&w=740')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-cover bg-left relative">
+            <div className="bg-[url('https://img.freepik.com/free-vector/hand-drawn-clothing-donation-illustration_23-2148814803.jpg?t=st=1727180878~exp=1727184478~hmac=e25561946bd0e5851d8038f2aff64ba4fb17fafd70b1f14ab93601a74c88b3cd&w=740')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-cover bg-left lg:bg-center relative">
               <div className="z-[1]">
                 <div className="flex gap-2 items-center mb-5">
                   <GiftIcon className=" text-primary" />

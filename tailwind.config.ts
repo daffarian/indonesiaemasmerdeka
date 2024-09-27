@@ -19,9 +19,6 @@ const config = {
         xl: "5rem",
         "2xl": "6rem",
       },
-      screens: {
-        "2xl": "1400px",
-      },
     },
     extend: {
       colors: {
