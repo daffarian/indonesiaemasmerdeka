@@ -59,7 +59,6 @@ export default function DesktopNav({ className }: { className?: string }) {
                     meningkatkan kualitas hidup
                   </p>
                 </div>
-                <Link href={"/"}></Link>
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -124,11 +123,11 @@ export default function DesktopNav({ className }: { className?: string }) {
           {/* Help Stop */}
           {/* Pillar Start */}
           <NavigationMenuItem>
-            <Link href={"/"}>
+            {/* <Link href={"/"}> */}
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Cerita Berbagi
               </NavigationMenuLink>
-            </Link>
+            {/* </Link> */}
           </NavigationMenuItem>
           {/* Pillar Stop */}
         </NavigationMenuList>

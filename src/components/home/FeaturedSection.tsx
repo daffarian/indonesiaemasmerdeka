@@ -8,8 +8,8 @@ export default function FeaturedSection({ className }: { className?: string }) {
       <h2 className="text-center">
         Mari Kolaborasi <span className="text-yellow-500">Bersama</span>
       </h2>
-      <div className="container mt-10 flex flex-col gap-7">
-        <div className="p-5 border-2 border-orange-200 h-52 rounded-3xl bg-white shadow-xl">
+      <div className="container mt-10 grid grid-flow-row gap-7 lg:grid-flow-col">
+        <div className="p-5 border-2 border-orange-200 h-60 rounded-3xl bg-white shadow-xl">
           <TargetIcon className="text-yellow-500 h-10 w-10" />
           <h3 className="mt-3">Tepat Sasaran</h3>
           <p className="text-zinc-700 mt-3">
@@ -17,14 +17,14 @@ export default function FeaturedSection({ className }: { className?: string }) {
             lapisan sosial masyarakat.
           </p>
         </div>
-        <div className="p-5 border-2 border-orange-200 h-52 rounded-3xl bg-white shadow-xl">
+        <div className="p-5 border-2 border-orange-200 h-60 rounded-3xl bg-white shadow-xl">
           <SendIcon className="text-yellow-500 h-10 w-10" />
           <h3 className="mt-3">Terpublikasi</h3>
           <p className="text-zinc-700 mt-3">
             Publikasi yang luas, secara online maupun offline.
           </p>
         </div>
-        <div className="p-5 border-2 border-orange-200 h-52 rounded-3xl bg-white shadow-xl">
+        <div className="p-5 border-2 border-orange-200 h-60 rounded-3xl bg-white shadow-xl">
           <MonitorIcon className="text-yellow-500 h-10 w-10" />
           <h3 className="mt-3">Termonitor</h3>
           <p className="text-zinc-700 mt-3">
