@@ -10,7 +10,7 @@ export default function HomeSection({ className }: { className?: string }) {
           <span className="bg-gradient-to-b from-red-500 via-yellow-500 to-white bg-clip-text text-transparent drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)]">
             Indonesia Emas
           </span>{" "}
-          <span className="text-[#FFD700]"></span> Merdeka
+          <span className="text-[#FFD700]"></span>
         </h1>
         {/* Image Start */}
         {/* <img className="mb-5" src="/images/hero.webp" alt="logo" /> */}

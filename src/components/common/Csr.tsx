@@ -6,7 +6,7 @@ export default function Csr({ className }: { className?: string }) {
   return (
     <section className={className}>
       <div className="">
-        <div className="">
+        <div className="flex flex-col lg:flex-row">
           {/* Contact Start */}
           <div className="container py-10 bg-secondary">
             <p className="text-lg text-zinc-800 font-bold">
@@ -22,7 +22,7 @@ export default function Csr({ className }: { className?: string }) {
                   </div>
                   <div>
                     <p className="font-bold">Whatsapp</p>
-                    <p className="text-sm">+62-899-9999-9999</p>
+                    <p className="text-sm">+62-858-9187-7388</p>
                   </div>
                 </div>
               </Link>
@@ -35,7 +35,7 @@ export default function Csr({ className }: { className?: string }) {
                   </div>
                   <div>
                     <p className="font-bold">Email</p>
-                    <p className="text-sm">info@yayasanindonesiaemas.com</p>
+                    <p className="text-sm">ira@yayasanindonesiaemas.com</p>
                   </div>
                 </div>
               </Link>
