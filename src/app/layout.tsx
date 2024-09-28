@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Yayasan Indonesia Emas Merdeka",
-  description: "www.indonesiaemasmerdeka.org",
+  title: "Yayasan Indonesia Emas",
+  description: "www.indonesiaemasmerdeka.orgDukung program kesehatan, pemerataan akses pendidikan, pemberdayaan UMKM, dan pelestarian lingkungan untuk meningkatkan kualitas hidup masyarakat Indonesia secara berkelanjutan.",
 };
 
 export default function RootLayout({

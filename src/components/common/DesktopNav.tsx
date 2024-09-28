@@ -123,11 +123,9 @@ export default function DesktopNav({ className }: { className?: string }) {
           {/* Help Stop */}
           {/* Pillar Start */}
           <NavigationMenuItem>
-            {/* <Link href={"/"}> */}
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Cerita Berbagi
-              </NavigationMenuLink>
-            {/* </Link> */}
+            <Link href={"/"} className={navigationMenuTriggerStyle()}>
+              Cerita Berbagi
+            </Link>
           </NavigationMenuItem>
           {/* Pillar Stop */}
         </NavigationMenuList>

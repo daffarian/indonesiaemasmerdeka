@@ -4,7 +4,7 @@ import MonitorIcon from "../icons/MonitorIcon";
 
 export default function FeaturedSection({ className }: { className?: string }) {
   return (
-    <section className={`${className} py-10 bg-amber-50`}>
+    <section className={`${className} py-10 lg:py-20 bg-amber-50`}>
       <h2 className="text-center">
         Mari Kolaborasi <span className="text-yellow-500">Bersama</span>
       </h2>

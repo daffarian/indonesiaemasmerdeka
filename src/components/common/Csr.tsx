@@ -8,33 +8,33 @@ export default function Csr({ className }: { className?: string }) {
       <div className="">
         <div className="flex flex-col lg:flex-row">
           {/* Contact Start */}
-          <div className="container py-10 bg-secondary">
-            <p className="text-lg text-zinc-800 font-bold">
+          <div className="container py-10 lg:py-20 bg-secondary">
+            <p className=" text-zinc-800 font-bold">
               Siap Kolaborasi Membawa Perubahan Melalui Program Berkelanjutan ?
             </p>
             <p className="text-zinc-800 font-bold my-5">Hubungi Kami</p>
             <div className="flex flex-col gap-5">
               {/* Whatsapp Start */}
-              <Link href={"/"}>
+              <a href={"https:wa.me/6285891877388"}>
                 <div className="flex flex-row gap-3 items-center text-zinc-800 py-5 px-3 border-zinc-800 border rounded-lg">
                   <div className="inline-flex justify-center items-center p-3 rounded-full bg-green-500">
                     <WaIcon className="w-8 h-8" />
                   </div>
                   <div>
-                    <p className="font-bold">Whatsapp</p>
+                    <h4 className="font-bold">Whatsapp</h4>
                     <p className="text-sm">+62-858-9187-7388</p>
                   </div>
                 </div>
-              </Link>
+              </a>
               {/* Whatsapp Stop */}
               {/* Email Start */}
-              <Link href={"/"}>
+              <Link href={"mailto:ira@yayasanindonesiaemas.com"}>
                 <div className="flex flex-row gap-3 items-center text-zinc-800 py-5 px-3 border-zinc-800 border rounded-lg">
                   <div className="inline-flex justify-center items-center p-3 rounded-full bg-red-500">
                     <EmailIcon className="w-8 h-8" />
                   </div>
                   <div>
-                    <p className="font-bold">Email</p>
+                    <h4 className="font-bold">Email</h4>
                     <p className="text-sm">ira@yayasanindonesiaemas.com</p>
                   </div>
                 </div>
@@ -44,7 +44,7 @@ export default function Csr({ className }: { className?: string }) {
           </div>
           {/* Contact Stop */}
           {/* Form Start */}
-          <div className="py-10 bg-amber-50 container">
+          <div className="py-10 lg:py-20 bg-amber-50 container">
             <form action="#" className="flex flex-col gap-5 ">
               {/* Email Start */}
               <div className="flex flex-col gap-2">

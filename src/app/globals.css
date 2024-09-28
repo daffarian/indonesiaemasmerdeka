@@ -10,19 +10,29 @@
   }
 }
 
-
 h1 {
-  @apply text-4xl font-extrabold;
+  @apply text-4xl font-extrabold lg:text-5xl;
 }
 
 h2 {
-  @apply text-xl font-bold;
+  @apply text-xl font-bold lg:text-3xl;
 }
 
 h3 {
-  @apply text-lg font-bold;
+  @apply text-lg font-bold lg:text-2xl;
 }
 
+h4 {
+  @apply lg:text-xl;
+}
+
+label{
+  @apply text-base lg:text-xl;
+}
+
+p{
+  @apply lg:text-lg
+}
 /* p,
 span,
 div ol,

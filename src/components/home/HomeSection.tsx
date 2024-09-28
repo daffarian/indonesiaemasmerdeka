@@ -3,9 +3,9 @@ import { FlipWordsDemo } from "@/components/common/FlipWords";
 
 export default function HomeSection({ className }: { className?: string }) {
   return (
-    <section className={`${className} pb-10 pt-20 `}>
+    <section className={`${className} pb-10 pt-20 lg:pb-20 lg:pt-40`}>
       <div className="container">
-        <h1 className="py-10 text-zinc-800">
+        <h1 className="py-10 text-zinc-800 mt-10">
           Yayasan <br />{" "}
           <span className="bg-gradient-to-b from-red-500 via-yellow-500 to-white bg-clip-text text-transparent drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)]">
             Indonesia Emas
@@ -17,7 +17,7 @@ export default function HomeSection({ className }: { className?: string }) {
         {/* Image Stop */}
         {/* Hero */}
         {/* Headline Start */}
-        <p className="text-xl font-bold">
+        <p className="text-xl font-bold mt-20">
           Lets Collaboration To Making Impact
           {/* Pillar */}
         </p>
@@ -40,7 +40,7 @@ export default function HomeSection({ className }: { className?: string }) {
             </Link>
             <Link
               className="bg-amber-100 text-center text-amber-500 w-full px-5 py-3 rounded-lg"
-              href={"/"}
+              href={"/hubungi-kami"}
             >
               Hubungi Kami
             </Link>

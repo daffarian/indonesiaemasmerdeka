@@ -8,7 +8,7 @@ import "react-multi-carousel/lib/styles.css";
 
 export default function ServicesSection({ className }: { className?: string }) {
   return (
-    <section className={`${className} bg-secondary text-dark-gray py-10`}>
+    <section className={`${className} bg-secondary text-dark-gray py-10 lg:py-20`}>
       <div className="container">
         <h2>
           Bentuk Kerja Sama yang Bisa Kita Lakukan{" "}

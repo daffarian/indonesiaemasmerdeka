@@ -19,7 +19,9 @@ export default function Header({ className }: { className?: string }) {
       )}
     >
       <div className="container justify-between items-center flex flex-row">
-        <Author className="w-12 lg:w-16" />
+        <Link href={"/"}>
+          <Author className="w-12 lg:w-16" />
+        </Link>
         <DesktopNav />
         <MobileNav />
         <Link
