@@ -1,4 +1,3 @@
-import Link from "next/link";
 import WaIcon from "../icons/WaIcon";
 import EmailIcon from "../icons/EmailIcon";
 
@@ -15,7 +14,7 @@ export default function Csr({ className }: { className?: string }) {
             <p className="text-zinc-800 font-bold my-5">Hubungi Kami</p>
             <div className="flex flex-col gap-5">
               {/* Whatsapp Start */}
-              <a href={"https:wa.me/6285891877388"}>
+              <a href="https://api.whatsapp.com/send?phone=6285891877388&text=Hallo%20Yayasan%20Indonesia%20Emas%20saya%20mau%20tanya," target="_blank">
                 <div className="flex flex-row gap-3 items-center text-zinc-800 py-5 px-3 border-zinc-800 border rounded-lg">
                   <div className="inline-flex justify-center items-center p-3 rounded-full bg-green-500">
                     <WaIcon className="w-8 h-8" />
@@ -28,7 +27,7 @@ export default function Csr({ className }: { className?: string }) {
               </a>
               {/* Whatsapp Stop */}
               {/* Email Start */}
-              <Link href={"mailto:ira@yayasanindonesiaemas.com"}>
+              <a href={"mailto:ira@yayasanindonesiaemas.com"}>
                 <div className="flex flex-row gap-3 items-center text-zinc-800 py-5 px-3 border-zinc-800 border rounded-lg">
                   <div className="inline-flex justify-center items-center p-3 rounded-full bg-red-500">
                     <EmailIcon className="w-8 h-8" />
@@ -38,7 +37,7 @@ export default function Csr({ className }: { className?: string }) {
                     <p className="text-sm">ira@yayasanindonesiaemas.com</p>
                   </div>
                 </div>
-              </Link>
+              </a>
               {/* Email Stop */}
             </div>
           </div>

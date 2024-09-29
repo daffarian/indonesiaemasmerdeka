@@ -25,7 +25,9 @@ export default function Footer({ className }: { className?: string }) {
             </div>
             <div className="flex flex-row gap-2 items-center">
               <WaIcon className="w-4 h-4" />
-              <a href="https:wa.me/6285891877388">+62-858-9187-7388</a>
+              <a href="https://api.whatsapp.com/send?phone=6285891877388&text=Hallo%20Yayasan%20Indonesia%20Emas," target="_blank">
+                +62-858-9187-7388
+              </a>
             </div>
           </address>
           <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">

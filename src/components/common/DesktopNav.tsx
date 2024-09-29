@@ -16,7 +16,7 @@ import GiftIcon from "../icons/GiftIcon";
 export default function DesktopNav({ className }: { className?: string }) {
   return (
     <nav className="hidden lg:block">
-      <NavigationMenu className="text-zinc-600 !text-xl">
+      <NavigationMenu className="text-zinc-600">
         <NavigationMenuList>
           {/* Pillar Start */}
           <NavigationMenuItem>
@@ -28,7 +28,7 @@ export default function DesktopNav({ className }: { className?: string }) {
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       Kesehatan
                     </h2>
-                    <p>Dukung Program untuk masyarakat Indonesia</p>
+                    <p className="text-sm">Dukung Program untuk masyarakat Indonesia</p>
                   </div>
                 </Link>
                 <Link href={"/"}>
@@ -36,7 +36,7 @@ export default function DesktopNav({ className }: { className?: string }) {
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       Pendidikan
                     </h2>
-                    <p>
+                    <p className="text-sm">
                       Dukung Program pemerataan akses pendidikan dan peningkatan
                       kemampuan lulusan
                     </p>
@@ -47,14 +47,14 @@ export default function DesktopNav({ className }: { className?: string }) {
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       UMKM
                     </h2>
-                    <p>Dukung dan memberdayakan usaha kecil dan menengah</p>
+                    <p className="text-sm">Dukung dan memberdayakan usaha kecil dan menengah</p>
                   </div>
                 </Link>
                 <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                   <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                     Lingkungan
                   </h2>
-                  <p>
+                  <p className="text-sm">
                     Melestarikan dan Menjaga Ekosistem Lingkungan untuk
                     meningkatkan kualitas hidup
                   </p>
