@@ -3,28 +3,16 @@
 import { useState, useEffect } from "react";
 
 export default function useIsScroll() {
-  const [windowHeight, setWindowHeight] = useState<number>(0);
-  const [isScroll, setIsScroll] = useState<boolean>(false);
+  const [scroll, setScroll] = useState(true);
 
-  const handleScroll = () => {
-    setWindowHeight(window.scrollY);
+  const scrollHandler = () => {
+    window.scrollY > 10 ? setScroll(true) : setScroll(false);
   };
-
+  
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, [scroll]);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  },);
-
-  useEffect(()=>{
-    if(windowHeight > 0){
-      setIsScroll(true);
-    }else{
-      setIsScroll(false);
-    }
-  }, [windowHeight]);
-
-  return isScroll;
+  return scroll;
 }

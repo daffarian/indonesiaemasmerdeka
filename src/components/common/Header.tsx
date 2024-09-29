@@ -8,13 +8,13 @@ import clsx from "clsx";
 import useIsScroll from "@/hooks/useIsScroll";
 import Link from "next/link";
 export default function Header({ className }: { className?: string }) {
-  // const isScroll = useIsScroll();
+  const isScroll = useIsScroll();
   return (
     <header
       className={clsx(
         `${className} transition-all mx-auto fixed bg-white z-20 !w-full py-4`,
         {
-          // "drop-shadow-lg": isScroll === true,
+          "drop-shadow-lg": isScroll === true,
         }
       )}
     >
