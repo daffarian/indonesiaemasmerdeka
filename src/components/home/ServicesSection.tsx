@@ -8,7 +8,9 @@ import "react-multi-carousel/lib/styles.css";
 
 export default function ServicesSection({ className }: { className?: string }) {
   return (
-    <section className={`${className} bg-secondary text-dark-gray py-10 lg:py-20`}>
+    <section
+      className={`${className} bg-secondary text-dark-gray py-10 lg:py-20`}
+    >
       <div className="container">
         <h2>
           Bentuk Kerja Sama yang Bisa Kita Lakukan{" "}
@@ -16,23 +18,24 @@ export default function ServicesSection({ className }: { className?: string }) {
         </h2>
         <div className="mt-10 relative pb-[30px] overflow-hidden">
           <Carousel
-            additionalTransfrom={0}
             arrows={false}
-            autoPlay
+            additionalTransfrom={0}
+            autoPlay={true}
             autoPlaySpeed={3000}
             centerMode={false}
             className=""
-            containerClass="container-with-dots"
+            containerClass="container"
             dotListClass=""
-            draggable={false}
+            draggable
             focusOnSelect={false}
             infinite
             itemClass=""
             keyBoardControl
             minimumTouchDrag={80}
-            pauseOnHover={true}
+            partialVisible
+            pauseOnHover
+            partialVisbile={true}
             renderArrowsWhenDisabled={false}
-            renderButtonGroupOutside={true}
             renderDotsOutside={true}
             responsive={{
               desktop: {
@@ -40,7 +43,7 @@ export default function ServicesSection({ className }: { className?: string }) {
                   max: 3000,
                   min: 1024,
                 },
-                items: 1,
+                items: 3,
                 partialVisibilityGutter: 40,
               },
               mobile: {
@@ -56,7 +59,7 @@ export default function ServicesSection({ className }: { className?: string }) {
                   max: 1024,
                   min: 464,
                 },
-                items: 1,
+                items: 2,
                 partialVisibilityGutter: 30,
               },
             }}
