@@ -24,7 +24,7 @@ export default function ServicesSection({ className }: { className?: string }) {
             autoPlaySpeed={3000}
             centerMode={false}
             className=""
-            containerClass="container"
+            containerClass="container-with-dots"
             dotListClass=""
             draggable
             focusOnSelect={false}
@@ -43,8 +43,8 @@ export default function ServicesSection({ className }: { className?: string }) {
                   max: 3000,
                   min: 1024,
                 },
-                items: 3,
-                partialVisibilityGutter: 40,
+                items: 1,
+                // partialVisibilityGutter: 40,
               },
               mobile: {
                 breakpoint: {
@@ -52,15 +52,15 @@ export default function ServicesSection({ className }: { className?: string }) {
                   min: 0,
                 },
                 items: 1,
-                partialVisibilityGutter: 30,
+                // partialVisibilityGutter: 30,
               },
               tablet: {
                 breakpoint: {
                   max: 1024,
                   min: 464,
                 },
-                items: 2,
-                partialVisibilityGutter: 30,
+                items: 1,
+                // partialVisibilityGutter: 30,
               },
             }}
             rewind={false}
@@ -73,7 +73,7 @@ export default function ServicesSection({ className }: { className?: string }) {
             swipeable
           >
             {/* Donatioan Start */}
-            <div className="bg-[url('https://img.freepik.com/free-vector/hand-drawn-clothing-donation-illustration_23-2148814803.jpg?t=st=1727180878~exp=1727184478~hmac=e25561946bd0e5851d8038f2aff64ba4fb17fafd70b1f14ab93601a74c88b3cd&w=740')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-cover bg-left lg:bg-center relative m-5">
+            <div className="bg-[url('https://img.freepik.com/free-vector/hand-drawn-clothing-donation-illustration_23-2148814803.jpg?t=st=1727180878~exp=1727184478~hmac=e25561946bd0e5851d8038f2aff64ba4fb17fafd70b1f14ab93601a74c88b3cd&w=740')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-cover bg-left lg:bg-center relative">
               <div className="z-[1]">
                 <div className="flex gap-2 items-center mb-5">
                   <GiftIcon className=" text-primary" />
@@ -90,7 +90,7 @@ export default function ServicesSection({ className }: { className?: string }) {
             {/* Donatioan Stop */}
 
             {/* Edication Start */}
-            <div className="bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-cover bg-bottom-top relative m-5">
+            <div className="bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-cover bg-bottom-top relative">
               <div className="z-[1]">
                 <div className="flex gap-2 items-center mb-5">
                   <GraduationCapIcon className=" text-primary" />
@@ -108,7 +108,7 @@ export default function ServicesSection({ className }: { className?: string }) {
             {/* Edication Stop */}
 
             {/* Environment Start */}
-            <div className="bg-[url('https://images.unsplash.com/photo-1641985516750-cc62447213c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-current relative m-5">
+            <div className="bg-[url('https://images.unsplash.com/photo-1641985516750-cc62447213c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-current relative">
               <div className="z-[1]">
                 <div className="flex gap-2 items-center mb-5">
                   <FlowerIcon className=" text-primary" />

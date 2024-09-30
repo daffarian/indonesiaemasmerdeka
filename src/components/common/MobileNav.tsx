@@ -48,136 +48,149 @@ export default function MobileNav() {
           isOpenNav ? "translate-x-0" : "translate-x-full" // Menggunakan translate
         )}
       >
-        <div className="container pl-10">
-          <Accordion type="single" collapsible>
-            {/* Pillar Start */}
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="text-base text-zinc-600">
-                Pilar
-              </AccordionTrigger>
-              <AccordionContent>
-                <Link
-                  href="/"
-                  className=""
-                  onClick={() => {
-                    setIsOpenNav(false);
-                  }}
-                >
-                  <div className="px-3 py-2 rounded-lg hover:text-primary">
-                    Kesehatan
-                  </div>
-                </Link>
-                <Link
-                  href="/"
-                  className=""
-                  onClick={() => {
-                    setIsOpenNav(false);
-                  }}
-                >
-                  <div className="px-3 py-2 rounded-lg hover:text-primary">
-                    Pendidikan
-                  </div>
-                </Link>
-                <Link
-                  href="/"
-                  className=""
-                  onClick={() => {
-                    setIsOpenNav(false);
-                  }}
-                >
-                  <div className="px-3 py-2 rounded-lg hover:text-primary">
-                    UMKM
-                  </div>
-                </Link>
-                <Link
-                  href="/"
-                  className=""
-                  onClick={() => {
-                    setIsOpenNav(false);
-                  }}
-                >
-                  <div className="px-3 py-2 rounded-lg hover:text-primary">
-                    Lingkungan
-                  </div>
-                </Link>
-              </AccordionContent>
-            </AccordionItem>
-            {/* Pillar Stop */}
-            {/* Program Start */}
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-base text-zinc-600">
-                Program
-              </AccordionTrigger>
-              <AccordionContent>
-                <Link
-                  href="/"
-                  className=""
-                  onClick={() => {
-                    setIsOpenNav(false);
-                  }}
-                >
-                  <div className="px-3 py-2 rounded-lg hover:text-primary flex items-center">
-                    <GiftIcon className="mr-2 text-primary inline w-5 h-5" />
-                    Donasi
-                  </div>
-                </Link>
-              </AccordionContent>
-            </AccordionItem>
-            {/* Program Stop */}
-            {/* Help Start */}
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-base text-zinc-600">
-                Bantuan
-              </AccordionTrigger>
-              <AccordionContent>
-                <Link
-                  href="/"
-                  className=""
-                  onClick={() => {
-                    setIsOpenNav(false);
-                  }}
-                >
-                  <div className="px-3 py-2 rounded-lg hover:text-primary">
-                    FAQ
-                  </div>
-                </Link>
-                <Link
-                  href="/"
-                  className=""
-                  onClick={() => {
-                    setIsOpenNav(false);
-                  }}
-                >
-                  <div className="px-3 py-2 rounded-lg hover:text-primary">
-                    Kebijakan Privasi
-                  </div>
-                </Link>
-                <Link
-                  href="/"
-                  className=""
-                  onClick={() => {
-                    setIsOpenNav(false);
-                  }}
-                >
-                  <div className="px-3 py-2 rounded-lg hover:text-primary">
-                    Syarat Pengguna
-                  </div>
-                </Link>
-              </AccordionContent>
-            </AccordionItem>
-            {/* Help Stop */}
-            {/* History Start */}
-            <Link
-              href={"/"}
-              className="hover:textprimary text-zinc-600 text-base font-medium mt-3 block"
-              onClick={() => {
-                setIsOpenNav(false);
-              }}
-            >
-              Cerita Berbagi
-            </Link>
-            {/* History Stop */}
-          </Accordion>
+        <div className="container pl-10 flex flex-col justify-between h-full">
+          <div>
+            <Accordion type="single" collapsible>
+              {/* Pillar Start */}
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-base text-zinc-600">
+                  Pilar
+                </AccordionTrigger>
+                <AccordionContent>
+                  <Link
+                    href="/"
+                    className=""
+                    onClick={() => {
+                      setIsOpenNav(false);
+                    }}
+                  >
+                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                      Kesehatan
+                    </div>
+                  </Link>
+                  <Link
+                    href="/"
+                    className=""
+                    onClick={() => {
+                      setIsOpenNav(false);
+                    }}
+                  >
+                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                      Pendidikan
+                    </div>
+                  </Link>
+                  <Link
+                    href="/"
+                    className=""
+                    onClick={() => {
+                      setIsOpenNav(false);
+                    }}
+                  >
+                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                      UMKM
+                    </div>
+                  </Link>
+                  <Link
+                    href="/"
+                    className=""
+                    onClick={() => {
+                      setIsOpenNav(false);
+                    }}
+                  >
+                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                      Lingkungan
+                    </div>
+                  </Link>
+                </AccordionContent>
+              </AccordionItem>
+              {/* Pillar Stop */}
+              {/* Program Start */}
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-base text-zinc-600">
+                  Program
+                </AccordionTrigger>
+                <AccordionContent>
+                  <Link
+                    href="/"
+                    className=""
+                    onClick={() => {
+                      setIsOpenNav(false);
+                    }}
+                  >
+                    <div className="px-3 py-2 rounded-lg hover:text-primary flex items-center">
+                      <GiftIcon className="mr-2 text-primary inline w-5 h-5" />
+                      Donasi
+                    </div>
+                  </Link>
+                </AccordionContent>
+              </AccordionItem>
+              {/* Program Stop */}
+              {/* Help Start */}
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-base text-zinc-600">
+                  Bantuan
+                </AccordionTrigger>
+                <AccordionContent>
+                  <Link
+                    href="/"
+                    className=""
+                    onClick={() => {
+                      setIsOpenNav(false);
+                    }}
+                  >
+                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                      FAQ
+                    </div>
+                  </Link>
+                  <Link
+                    href="/"
+                    className=""
+                    onClick={() => {
+                      setIsOpenNav(false);
+                    }}
+                  >
+                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                      Kebijakan Privasi
+                    </div>
+                  </Link>
+                  <Link
+                    href="/"
+                    className=""
+                    onClick={() => {
+                      setIsOpenNav(false);
+                    }}
+                  >
+                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                      Syarat Pengguna
+                    </div>
+                  </Link>
+                </AccordionContent>
+              </AccordionItem>
+              {/* Help Stop */}
+              {/* History Start */}
+              <Link
+                href={"/"}
+                className="hover:textprimary text-zinc-600 text-base font-medium mt-3 block"
+                onClick={() => {
+                  setIsOpenNav(false);
+                }}
+              >
+                Cerita Berbagi
+              </Link>
+              {/* History Stop */}
+            </Accordion>
+          </div>
+        </div>
+        <div className="container absolute bottom-[5.5rem]">
+          <Link
+            href="/hubungi-kami"
+            className="block text-base w-full text-wrap bg-primary p-2 rounded-lg text-white text-center font-medium"
+            onClick={() => {
+              setIsOpenNav(false);
+            }}
+          >
+            Corporate CSR Collaboration
+          </Link>
         </div>
       </div>
     </nav>
