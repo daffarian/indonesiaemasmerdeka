@@ -4,6 +4,8 @@ import WaIcon from "../icons/WaIcon";
 
 import Link from "next/link";
 
+import FollowUs from "./FollowUs";
+
 export default function Footer({ className }: { className?: string }) {
   return (
     <footer
@@ -25,7 +27,10 @@ export default function Footer({ className }: { className?: string }) {
             </div>
             <div className="flex flex-row gap-2 items-center">
               <WaIcon className="w-4 h-4" />
-              <a href="https://api.whatsapp.com/send?phone=6285891877388&text=Hallo%20Yayasan%20Indonesia%20Emas," target="_blank">
+              <a
+                href="https://api.whatsapp.com/send?phone=6285891877388&text=Hallo%20Yayasan%20Indonesia%20Emas,"
+                target="_blank"
+              >
                 +62-858-9187-7388
               </a>
             </div>
@@ -84,6 +89,13 @@ export default function Footer({ className }: { className?: string }) {
             </div>
           </div>
         </div>
+        {/* Sosmed Start */}
+        <div>
+          <h4 className="font-bold text-primary text-base mt-5 mb-2">Ikuti Kami</h4>
+        </div>
+        <FollowUs  />
+
+        {/* Sosmed Stop */}
         <p className="text-sm text-center lg:text-start mt-8">
           Copyright &copy; 2024 Yayasan Indonesia Emas
         </p>

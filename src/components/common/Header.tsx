@@ -13,7 +13,7 @@ export default function Header({ className }: { className?: string }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      if (window.scrollY > 100) {
         setIsScroll(true);
       } else {
         setIsScroll(false);
@@ -22,13 +22,14 @@ export default function Header({ className }: { className?: string }) {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  });
+  },[]);
+
   return (
     <header
       className={clsx(
         `${className} transition-all mx-auto fixed bg-white z-20 !w-full py-4`,
         {
-          "drop-shadow-lg": isScroll === true,
+          // "drop-shadow-lg": isScroll === true,
         }
       )}
     >
