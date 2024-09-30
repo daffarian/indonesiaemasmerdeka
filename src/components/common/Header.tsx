@@ -5,10 +5,24 @@ import DesktopNav from "./DesktopNav";
 
 import clsx from "clsx";
 
-import useIsScroll from "@/hooks/useIsScroll";
+import { useState, useEffect } from "react";
+
 import Link from "next/link";
 export default function Header({ className }: { className?: string }) {
-  const isScroll = useIsScroll();
+  const [isScroll, setIsScroll] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
   return (
     <header
       className={clsx(
