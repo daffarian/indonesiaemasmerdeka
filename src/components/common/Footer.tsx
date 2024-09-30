@@ -9,7 +9,7 @@ import FollowUs from "./FollowUs";
 export default function Footer({ className }: { className?: string }) {
   return (
     <footer
-      className={`${className} py-5 lg:py-10 text-base bg-yellow-950 text-white font-extralight`}
+      className={`${className} py-5 lg:py-10 text-base bg-zinc-800 text-white font-extralight`}
     >
       <div className="container">
         <div className="flex flex-col lg:flex-row justify-between">

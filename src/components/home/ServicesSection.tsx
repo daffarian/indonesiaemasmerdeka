@@ -32,6 +32,20 @@ export default function ServicesSection({ className }: { className?: string }) {
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true, dynamicBullets: false }}
             autoplay={{ delay: 3000, disableOnInteraction: true }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+              },
+            }}
           >
             {/* Donatioan Start */}
             <SwiperSlide>

@@ -9,14 +9,15 @@ import { useState, useEffect } from "react";
 
 import Link from "next/link";
 export default function Header({ className }: { className?: string }) {
-  const [onTop, setOnTop] = useState<boolean>(true);
+
+  const [styleOnScroll, setStyleOnScroll] = useState<string>('');
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setOnTop(false);
+      if (window.scrollY > 200) {
+        setStyleOnScroll('shadow-md');
       } else {
-        setOnTop(true);
+        setStyleOnScroll('');
       }
     };
 
@@ -27,10 +28,7 @@ export default function Header({ className }: { className?: string }) {
   return (
     <header
       className={clsx(
-        `${className} transition-all mx-auto fixed bg-white z-20 !w-full py-4`,
-        {
-          "drop-shadow-lg": onTop === false
-        }
+        `${className} ${styleOnScroll} transition-all mx-auto fixed bg-white z-20 !w-full py-4`,
       )}
     >
       <div className="container justify-between items-center flex flex-row">
