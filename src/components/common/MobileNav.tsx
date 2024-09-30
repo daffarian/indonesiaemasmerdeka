@@ -32,7 +32,7 @@ export default function MobileNav() {
 
   return (
     <nav className="lg:hidden">
-      <button className="flex flex-col gap-1 transition-all duration-500 ease-in-out">
+      <button className="flex flex-col gap-1 !z-50 transition-all duration-500 ease-in-out">
         <input id="toggleChecker" type="checkbox" onClick={handleToggle} />
         <label id="togglerLable" htmlFor="toggleChecker">
           <div className="checkboxtoggler">
@@ -44,7 +44,7 @@ export default function MobileNav() {
       </button>
       <div
         className={clsx(
-          "fixed w-full h-screen top-[4.35rem] left-0 bg-white z-[40] transition-transform duration-500 ease-in-out transform",
+          "fixed w-full h-screen top-0 left-0 bg-white z-[-1] pt-[4.35rem] transition-transform duration-500 ease-in-out transform",
           isOpenNav ? "translate-x-0" : "translate-x-full" // Menggunakan translate
         )}
       >
@@ -181,7 +181,7 @@ export default function MobileNav() {
             </Accordion>
           </div>
         </div>
-        <div className="container absolute bottom-[5.5rem]">
+        <div className="container absolute bottom-[1rem]">
           <Link
             href="/hubungi-kami"
             className="block text-base w-full text-wrap bg-primary p-2 rounded-lg text-white text-center font-medium"

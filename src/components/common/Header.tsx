@@ -15,7 +15,7 @@ export default function Header({ className }: { className?: string }) {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 200) {
-        setStyleOnScroll('shadow-md');
+        setStyleOnScroll('border-b-[1px] border-zinc-200');
       } else {
         setStyleOnScroll('');
       }
@@ -28,12 +28,12 @@ export default function Header({ className }: { className?: string }) {
   return (
     <header
       className={clsx(
-        `${className} ${styleOnScroll} transition-all mx-auto fixed bg-white z-20 !w-full py-4`,
+        `${className} ${styleOnScroll} transition-all mx-auto fixed bg-white z-50 !w-full py-4`,
       )}
     >
       <div className="container justify-between items-center flex flex-row">
         <Link href={"/"}>
-          <Author className="w-12 lg:w-16" />
+          <Author className="w-12 lg:w-16 !z-[60]" />
         </Link>
         <DesktopNav />
         <MobileNav />
