@@ -43,7 +43,7 @@ export default function HomeSection({ className }: { className?: string }) {
     <section className={`${className} pb-10 pt-16 lg:pb-20 lg:pt-40`}>
       <div className="container">
         {/* Author Start */}
-        <h1 className="pt-3 text-zinc-700 my-5">
+        <h1 className="pt-3 text-zinc-700 my-1">
           Yayasan <br />{" "}
           <span className="bg-gradient-to-b from-red-500 via-yellow-500 to-white bg-clip-text text-transparent drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)]">
             Indonesia Emas
@@ -55,29 +55,32 @@ export default function HomeSection({ className }: { className?: string }) {
         <Swiper
           ref={swiperRef1}
           spaceBetween={30}
+          draggable={true}
+          // allowSlideNext={false}
+          // allowSlidePrev={false}
           allowTouchMove={false}
           direction="vertical"
           initialSlide={activeIndex}
-          className="mySwiper1 h-60"
+          className="mySwiper1 h-56"
           effect="fade"
         >
           <SwiperSlide>
-            <img className="my-5" src="/images/lingkungan.jpg" alt="logo" />
+            <img className="my-3" src="/images/lingkungan.jpg" alt="logo" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="my-5" src="/images/lingkungan.jpg" alt="logo" />
+            <img className="my-3" src="/images/lingkungan.jpg" alt="logo" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="my-5" src="/images/lingkungan.jpg" alt="logo" />
+            <img className="my-3" src="/images/lingkungan.jpg" alt="logo" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className="my-5" src="/images/lingkungan.jpg" alt="logo" />
+            <img className="my-3" src="/images/lingkungan.jpg" alt="logo" />
           </SwiperSlide>
         </Swiper>
         {/* Image Stop */}
         {/* Hero */}
         {/* Headline Start */}
-        <p className="text-2xl mt-5 font-extrabold">
+        <p className="text-2xl font-extrabold">
           Lets Collaboration To Making Impact
           {/* Pillar */}
         </p>
