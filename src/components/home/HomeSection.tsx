@@ -55,9 +55,8 @@ export default function HomeSection({ className }: { className?: string }) {
         <Swiper
           ref={swiperRef1}
           spaceBetween={30}
-          
+          allowTouchMove={false}
           direction="vertical"
-          noSwiping={true}
           initialSlide={activeIndex}
           className="mySwiper1 h-60"
           effect="fade"
@@ -78,7 +77,7 @@ export default function HomeSection({ className }: { className?: string }) {
         {/* Image Stop */}
         {/* Hero */}
         {/* Headline Start */}
-        <p className="text-2xl font-extrabold">
+        <p className="text-2xl mt-5 font-extrabold">
           Lets Collaboration To Making Impact
           {/* Pillar */}
         </p>
@@ -116,7 +115,7 @@ export default function HomeSection({ className }: { className?: string }) {
         {/* Headline Stop */}
         {/* CTA Start */}
         <div>
-          <p className="mt-10 font-semibold">
+          <p className="mt-5 font-semibold">
             Siap memberikan dampak kebaikan ?
           </p>
           <div className="flex flex-row w-full gap-5 mt-5 text-sm lg:w-96">
