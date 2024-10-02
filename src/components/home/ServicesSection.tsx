@@ -1,7 +1,8 @@
 "use client";
-import GiftIcon from "../icons/GiftIcon";
+import CrossIcon from "../icons/HealthIcon";
 import GraduationCapIcon from "../icons/GraduationCapIcon";
 import FlowerIcon from "../icons/FlowerIcon";
+import StoreIcon from "../icons/StoreIcon";
 import Link from "next/link";
 import "react-multi-carousel/lib/styles.css";
 
@@ -32,6 +33,7 @@ export default function ServicesSection({ className }: { className?: string }) {
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true, dynamicBullets: false }}
             autoplay={{ delay: 3000, disableOnInteraction: true }}
+            loop={true}
             breakpoints={{
               640: {
                 slidesPerView: 2,
@@ -52,10 +54,10 @@ export default function ServicesSection({ className }: { className?: string }) {
               <div className="bg-[url('https://img.freepik.com/free-vector/hand-drawn-clothing-donation-illustration_23-2148814803.jpg?t=st=1727180878~exp=1727184478~hmac=e25561946bd0e5851d8038f2aff64ba4fb17fafd70b1f14ab93601a74c88b3cd&w=740')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-cover bg-left lg:bg-center relative">
                 <div className="z-[1]">
                   <div className="flex gap-2 items-center mb-5">
-                    <GiftIcon className=" text-primary" />
-                    <h3>Donasi</h3>
+                    <CrossIcon className=" text-primary" />
+                    <h3>Kesehatan</h3>
                   </div>
-                  <p>#WaktunyaBerbagi.</p>
+                  <p>Dukung program untuk masyarakat Indonesia.</p>
                   <span className="px-3 py-2 rounded-lg text-white hover:shadow-2xl mt-5 inline-flex bg-primary">
                     <Link href={"/"}>Selengkapnya</Link>
                   </span>
@@ -74,8 +76,8 @@ export default function ServicesSection({ className }: { className?: string }) {
                     <h3>Pendidikan</h3>
                   </div>
                   <p>
-                    Dukung pemerataan akses pendidikan untuk masyarakat
-                    Indonesia.
+                    Dukung Program pemerataan akses pendidikan dan peningkatan
+                    kemampuan lulusan.
                   </p>
                   <span className="px-3 py-2 rounded-lg text-white hover:shadow-2xl mt-5 inline-flex bg-primary">
                     <Link href={"/"}>Selengkapnya</Link>
@@ -85,6 +87,23 @@ export default function ServicesSection({ className }: { className?: string }) {
               </div>
               {/* Edication Stop */}
             </SwiperSlide>
+            {/* UMKM Start */}
+            <SwiperSlide>
+              <div className="bg-[url('https://izinin.id/public/img/blog/ilustrasi-umkm.jpg')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-current relative">
+                <div className="z-[1]">
+                  <div className="flex gap-2 items-center mb-5">
+                    <StoreIcon className=" text-primary" />
+                    <h3>UMKM </h3>
+                  </div>
+                  <p>Dukung dan memberdayakan usaha kecil dan menengah.</p>
+                  <span className="px-3 py-2 rounded-lg text-white hover:shadow-2xl mt-5 inline-flex bg-primary">
+                    <Link href={"/"}>Selengkapnya</Link>
+                  </span>
+                </div>
+                <div className="bg-gradient-to-r from-white to-white/30 via-white w-full h-full absolute inset-0 rounded-3xl"></div>
+              </div>
+            </SwiperSlide>
+            {/* UMKM Stop */}
             {/* Environment Start */}
             <SwiperSlide>
               <div className="bg-[url('https://images.unsplash.com/photo-1641985516750-cc62447213c4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-current relative">
@@ -93,15 +112,18 @@ export default function ServicesSection({ className }: { className?: string }) {
                     <FlowerIcon className=" text-primary" />
                     <h3>Lingkungan</h3>
                   </div>
-                  <p>Satu pohon selamatkan Bumi.</p>
+                  <p>
+                    4. Melestarikan dan Menjaga Ekosistem Lingkungan untuk
+                    meningkatkan kualitas hidup
+                  </p>
                   <span className="px-3 py-2 rounded-lg text-white hover:shadow-2xl mt-5 inline-flex bg-primary">
                     <Link href={"/"}>Selengkapnya</Link>
                   </span>
                 </div>
                 <div className="bg-gradient-to-r from-white to-white/30 via-white w-full h-full absolute inset-0 rounded-3xl"></div>
               </div>
-              {/* Environment Stop */}
             </SwiperSlide>
+            {/* Environment Stop */}
           </Swiper>
         </div>
       </div>

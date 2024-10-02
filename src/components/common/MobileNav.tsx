@@ -44,7 +44,7 @@ export default function MobileNav() {
       </button>
       <div
         className={clsx(
-          "fixed w-full h-screen top-0 left-0 bg-white z-[-1] pt-[4.35rem] transition-transform duration-500 ease-in-out transform",
+          "fixed w-full h-svh top-0 left-0 bg-white z-[-1] pt-[4.35rem] transition-transform duration-500 ease-in-out transform",
           isOpenNav ? "translate-x-0" : "translate-x-full" // Menggunakan translate
         )}
       >
@@ -64,7 +64,7 @@ export default function MobileNav() {
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
                       Kesehatan
                     </div>
                   </Link>
@@ -75,7 +75,7 @@ export default function MobileNav() {
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
                       Pendidikan
                     </div>
                   </Link>
@@ -86,7 +86,7 @@ export default function MobileNav() {
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
                       UMKM
                     </div>
                   </Link>
@@ -97,7 +97,7 @@ export default function MobileNav() {
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
                       Lingkungan
                     </div>
                   </Link>
@@ -119,7 +119,7 @@ export default function MobileNav() {
                   >
                     <div className="px-3 py-2 rounded-lg hover:text-primary flex items-center">
                       <GiftIcon className="mr-2 text-primary inline w-5 h-5" />
-                      Donasi
+                      <span className="text-zinc-600">Donasi</span>
                     </div>
                   </Link>
                 </AccordionContent>
@@ -138,7 +138,7 @@ export default function MobileNav() {
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
                       FAQ
                     </div>
                   </Link>
@@ -149,7 +149,7 @@ export default function MobileNav() {
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
                       Kebijakan Privasi
                     </div>
                   </Link>
@@ -160,7 +160,7 @@ export default function MobileNav() {
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
                       Syarat Pengguna
                     </div>
                   </Link>

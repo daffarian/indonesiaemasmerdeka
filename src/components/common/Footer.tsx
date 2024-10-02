@@ -25,7 +25,7 @@ export default function Footer({ className }: { className?: string }) {
                 ira@yayasanindonesiaemas.com
               </a>
             </div>
-            <div className="flex flex-row gap-2 items-center">
+            {/* <div className="flex flex-row gap-2 items-center">
               <WaIcon className="w-4 h-4" />
               <a
                 href="https://api.whatsapp.com/send?phone=6285891877388&text=Hallo%20Yayasan%20Indonesia%20Emas,"
@@ -33,7 +33,7 @@ export default function Footer({ className }: { className?: string }) {
               >
                 +62-858-9187-7388
               </a>
-            </div>
+            </div> */}
           </address>
           <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
             <div>
@@ -83,7 +83,7 @@ export default function Footer({ className }: { className?: string }) {
                   <Link href={"/"}>Cerita Berbagi</Link>
                 </li>
                 <li>
-                  <Link href={"/"}>Hubungi Kami</Link>
+                  <Link href={"/hubungi-kami"}>Hubungi Kami</Link>
                 </li>
               </ul>
             </div>
