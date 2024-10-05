@@ -113,7 +113,7 @@ export default function ServicesSection({ className }: { className?: string }) {
                     <h3>Lingkungan</h3>
                   </div>
                   <p>
-                    4. Melestarikan dan Menjaga Ekosistem Lingkungan untuk
+                    Melestarikan dan Menjaga Ekosistem Lingkungan untuk
                     meningkatkan kualitas hidup
                   </p>
                   <span className="px-3 py-2 rounded-lg text-white hover:shadow-2xl mt-5 inline-flex bg-primary">

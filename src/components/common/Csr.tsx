@@ -1,7 +1,25 @@
+"use client";
 import WaIcon from "../icons/WaIcon";
+import { useState } from "react";
 import EmailIcon from "../icons/EmailIcon";
+import { Target } from "lucide-react";
 
 export default function Csr({ className }: { className?: string }) {
+  const [message, setMessage] = useState<{
+    email: string;
+    phone: string;
+    body: string;
+  }>({ email: "", phone: "", body: "" });
+
+  const handleSubmit = (e: any) => {
+    console.log(e);
+    e.preventDefault;
+    const subject = `Pesan dari ${message.email} | ${message.phone}`;
+    const body = encodeURIComponent(message.body);
+    const mailtoLink = `mailto:${message.email}?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink; // Buka aplikasi email
+  };
   return (
     <section className={className}>
       <div className="">
@@ -44,7 +62,7 @@ export default function Csr({ className }: { className?: string }) {
           {/* Contact Stop */}
           {/* Form Start */}
           <div className="py-10 lg:py-20 bg-amber-50 container">
-            <form action="#" className="flex flex-col gap-5 ">
+            <form action={handleSubmit} className="flex flex-col gap-5 ">
               {/* Email Start */}
               <div className="flex flex-col gap-2">
                 <label
@@ -58,6 +76,10 @@ export default function Csr({ className }: { className?: string }) {
                   name="email"
                   id="email"
                   placeholder="Masukan email perusahaan"
+                  value={message.email}
+                  onChange={(e) => {
+                    setMessage({ ...message, email: e.target.value });
+                  }}
                   className="rounded-lg py-4 px-3 focus:outline-none placeholder:text-sm"
                 />
               </div>
@@ -75,6 +97,10 @@ export default function Csr({ className }: { className?: string }) {
                   name="phone"
                   id="phone"
                   placeholder="Masukan nomor aktif"
+                  value={message.phone}
+                  onChange={(e) => {
+                    setMessage({ ...message, phone: e.target.value });
+                  }}
                   className="rounded-lg py-4 px-3 focus:outline-none placeholder:text-sm"
                 />
               </div>
@@ -91,13 +117,20 @@ export default function Csr({ className }: { className?: string }) {
                   name="message"
                   id="message"
                   placeholder="Contoh : Program tanam mangrove di pesisir pantai"
+                  value={message.body}
+                  onChange={(e) => {
+                    setMessage({ ...message, body: e.target.value });
+                  }}
                   className="rounded-lg py-4 px-3 focus:outline-none placeholder:text-sm"
                   rows={5}
                 />
               </div>
               {/* Message Stop */}
               <div>
-                <button className="py-2 text-center rounded-xl inline-flex justify-center font-bold text-white items-center w-full bg-primary mt-5">
+                <button
+                  type="submit"
+                  className="py-2 text-center rounded-xl inline-flex justify-center font-bold text-white items-center w-full bg-primary mt-5"
+                >
                   Kirim
                 </button>
               </div>

@@ -70,7 +70,7 @@ export default function HomeSection({ className }: { className?: string }) {
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  className="mx-auto w-40 lg:w-full"
+                  className="mx-auto w-full lg:w-full h-auto"
                   src="/images/pilar/umkm.jpg"
                   alt="logo"
                 />
@@ -85,7 +85,7 @@ export default function HomeSection({ className }: { className?: string }) {
             </Swiper>
             {/* Image Stop */}
           </div>
-          <div className="order-last lg:order-1">
+          <div className="order-last lg:order-1 relative">
             {/* Author Start */}
             <h1 className="pt-3 text-zinc-700 my-1">
               Yayasan <br />{" "}
@@ -110,27 +110,29 @@ export default function HomeSection({ className }: { className?: string }) {
               spaceBetween={30}
               initialSlide={activeIndex}
               className="mySwiper2 h-10"
-              direction="vertical"
+              // direction="vertical"
               allowTouchMove={false}
+              // modules={[EffectFade]}
+              effect="fade"
             >
               <SwiperSlide>
                 <div className="text-primary text-2xl lg:text-3xl !font-extrabold">
-                  Kesehatan
+                  <p>Kesehatan</p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="text-primary text-2xl lg:text-3xl !font-extrabold">
-                  Pendidikan
+                  <p>Pendidikan</p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="text-primary text-2xl lg:text-3xl !font-extrabold">
-                  UMKM
+                  <p>UMKM</p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="text-primary text-2xl lg:text-3xl !font-extrabold">
-                  Lingkungan
+                  <p>Lingkungan</p>
                 </div>
               </SwiperSlide>
             </Swiper>
@@ -170,7 +172,6 @@ export default function HomeSection({ className }: { className?: string }) {
                 autoplay={{ delay: 3000, disableOnInteraction: true }}
                 // effect="fade"
                 allowTouchMove={false}
-              
               >
                 {/* Kesehatan Start*/}
                 <SwiperSlide>
