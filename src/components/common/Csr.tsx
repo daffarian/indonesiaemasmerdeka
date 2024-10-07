@@ -16,7 +16,7 @@ export default function Csr({ className }: { className?: string }) {
     e.preventDefault;
     const subject = `Pesan dari ${message.email} | ${message.phone}`;
     const body = encodeURIComponent(message.body);
-    const mailtoLink = `mailto:${message.email}?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:ira@yayasanindonesiaemas.com?subject=${subject}&body=${body}`;
 
     window.location.href = mailtoLink; // Buka aplikasi email
   };

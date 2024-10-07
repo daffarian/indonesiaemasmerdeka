@@ -117,22 +117,22 @@ export default function HomeSection({ className }: { className?: string }) {
             >
               <SwiperSlide>
                 <div className="text-primary text-2xl lg:text-3xl !font-extrabold">
-                  <p>Kesehatan</p>
+                  Kesehatan
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="text-primary text-2xl lg:text-3xl !font-extrabold">
-                  <p>Pendidikan</p>
+                  Pendidikan
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="text-primary text-2xl lg:text-3xl !font-extrabold">
-                  <p>UMKM</p>
+                  UMKM
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="text-primary text-2xl lg:text-3xl !font-extrabold">
-                  <p>Lingkungan</p>
+                  Lingkungan
                 </div>
               </SwiperSlide>
             </Swiper>

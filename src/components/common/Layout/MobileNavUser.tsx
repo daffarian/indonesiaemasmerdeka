@@ -12,9 +12,15 @@ import {
 
 import Link from "next/link";
 
-import GiftIcon from "../icons/GiftIcon";
+import GiftIcon from "../../icons/GiftIcon";
 
-export default function MobileNav() {
+export default function MobileNavUser({
+  className,
+  isArticleVisible,
+}: {
+  className?: string;
+  isArticleVisible?: number;
+}) {
   const [isOpenNav, setIsOpenNav] = useState(false);
 
   // Log perubahan state untuk debug
@@ -44,7 +50,7 @@ export default function MobileNav() {
       </button>
       <div
         className={clsx(
-          "fixed w-full h-svh top-0 left-0 bg-white z-[-1] pt-[4.35rem] transition-transform duration-500 ease-in-out transform",
+          "fixed w-full h-dvh top-0 left-0 bg-white z-[-1] pt-[4.35rem] transition-transform duration-500 ease-in-out transform",
           isOpenNav ? "translate-x-0" : "translate-x-full" // Menggunakan translate
         )}
       >
@@ -168,15 +174,17 @@ export default function MobileNav() {
               </AccordionItem>
               {/* Help Stop */}
               {/* History Start */}
-              <Link
-                href={"/"}
-                className="hover:textprimary text-zinc-600 text-base font-medium mt-3 block"
-                onClick={() => {
-                  setIsOpenNav(false);
-                }}
-              >
-                Cerita Berbagi
-              </Link>
+              {isArticleVisible === 1 && (
+                <Link
+                  href={"/cerita-berbagi"}
+                  className="hover:textprimary text-zinc-600 text-base font-medium mt-3 block"
+                  onClick={() => {
+                    setIsOpenNav(false);
+                  }}
+                >
+                  Cerita Berbagi
+                </Link>
+              )}
               {/* History Stop */}
             </Accordion>
           </div>

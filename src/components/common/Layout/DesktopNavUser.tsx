@@ -1,26 +1,32 @@
+"use client";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 
-import GiftIcon from "../icons/GiftIcon";
+import GiftIcon from "../../icons/GiftIcon";
 
-export default function DesktopNav({ className }: { className?: string }) {
+export default function DesktopNavUser({
+  className,
+  isArticleVisible,
+}: {
+  className?: string;
+  isArticleVisible?: number;
+}) {
   return (
     <nav className="hidden lg:block">
       <NavigationMenu className="text-zinc-600">
         <NavigationMenuList>
           {/* Pillar Start */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Pilar</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="tracking-wide">
+              Pilar
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="!text-sm p-3 w-96 flex flex-col font-thin">
                 <Link href="/">
@@ -28,7 +34,9 @@ export default function DesktopNav({ className }: { className?: string }) {
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       Kesehatan
                     </h2>
-                    <p className="text-sm">Dukung Program untuk masyarakat Indonesia</p>
+                    <p className="text-sm">
+                      Dukung Program untuk masyarakat Indonesia
+                    </p>
                   </div>
                 </Link>
                 <Link href={"/"}>
@@ -47,7 +55,9 @@ export default function DesktopNav({ className }: { className?: string }) {
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       UMKM
                     </h2>
-                    <p className="text-sm">Dukung dan memberdayakan usaha kecil dan menengah</p>
+                    <p className="text-sm">
+                      Dukung dan memberdayakan usaha kecil dan menengah
+                    </p>
                   </div>
                 </Link>
                 <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
@@ -66,7 +76,9 @@ export default function DesktopNav({ className }: { className?: string }) {
 
           {/* Pillar Start */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Program</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="tracking-wide">
+              Program
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="!text-sm w-96 flex flex-col">
                 <div className=" rounded-lg transition-all flex flex-row">
@@ -93,7 +105,9 @@ export default function DesktopNav({ className }: { className?: string }) {
           {/* Pillar Stop */}
           {/* Help Start */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Bantuan</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="tracking-wide">
+              Bantuan
+            </NavigationMenuTrigger>
             <NavigationMenuContent className="">
               <div className="!text-sm p-3 w-96 flex flex-col">
                 <Link href="/">
@@ -122,11 +136,16 @@ export default function DesktopNav({ className }: { className?: string }) {
           </NavigationMenuItem>
           {/* Help Stop */}
           {/* Pillar Start */}
-          <NavigationMenuItem>
-            <Link href={"/"} className={navigationMenuTriggerStyle()}>
-              Cerita Berbagi
-            </Link>
-          </NavigationMenuItem>
+          {isArticleVisible === 1 && (
+            <NavigationMenuItem>
+              <Link
+                href={"/cerita-berbagi"}
+                className={`${navigationMenuTriggerStyle()} tracking-wide`}
+              >
+                Cerita Berbagi
+              </Link>
+            </NavigationMenuItem>
+          )}
           {/* Pillar Stop */}
         </NavigationMenuList>
       </NavigationMenu>

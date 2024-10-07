@@ -1,12 +1,14 @@
-import Header from "@/components/common/Header";
-import Footer from "@/components/common/Footer";
-import { FORMERR } from "dns";
-export default function Layout({ children }: { children: React.ReactNode }) {
+import HeaderUser from "@/components/common/Layout/HeaderUser";
+import FooterUser from "@/components/common/Layout/FooterUser";
+
+import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
+export default async function Layout({ children }: { children: React.ReactNode }) {
+  const [isArticleVisible] = await fetchArticleVisible();
   return (
     <>
-      <Header />
+      <HeaderUser isArticleVisible={isArticleVisible.value} />
       <main>{children}</main>
-      <Footer/>
+      <FooterUser/>
     </>
   );
 }

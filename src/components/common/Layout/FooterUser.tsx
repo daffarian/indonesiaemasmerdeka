@@ -1,12 +1,12 @@
-import Author from "./Author";
-import EmailIcon from "../icons/EmailIcon";
-import WaIcon from "../icons/WaIcon";
+import Author from "../Author";
+import EmailIcon from "../../icons/EmailIcon";
+import WaIcon from "../../icons/WaIcon";
 
 import Link from "next/link";
 
-import FollowUs from "./FollowUs";
+import FollowUs from "../FollowUs";
 
-export default function Footer({ className }: { className?: string }) {
+export default function FooterUser({ className }: { className?: string }) {
   return (
     <footer
       className={`${className} py-5 lg:py-10 text-base bg-zinc-800 text-white font-extralight`}
@@ -80,7 +80,7 @@ export default function Footer({ className }: { className?: string }) {
               <h4 className="font-bold text-primary text-base">Terhubung</h4>
               <ul className="flex flex-col gap-2 mt-3">
                 <li>
-                  <Link href={"/"}>Cerita Berbagi</Link>
+                  <Link href={"/cerita-berbagi"}>Cerita Berbagi</Link>
                 </li>
                 <li>
                   <Link href={"/hubungi-kami"}>Hubungi Kami</Link>

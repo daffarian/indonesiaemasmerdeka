@@ -14,8 +14,13 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Yayasan Indonesia Emas",
-  description: "www.indonesiaemasmerdeka.orgDukung program kesehatan, pemerataan akses pendidikan, pemberdayaan UMKM, dan pelestarian lingkungan untuk meningkatkan kualitas hidup masyarakat Indonesia secara berkelanjutan.",
+  metadataBase: new URL("https://yayasanindonesiaemas.com"),
+  title: "Yayasan Indonesia Emas Merdeka",
+  description:
+    "Dukung program kesehatan, pemerataan akses pendidikan, pemberdayaan UMKM, dan pelestarian lingkungan untuk meningkatkan kualitas hidup masyarakat Indonesia secara berkelanjutan.",
+  openGraph: {
+    images: "https://yayasanindonesiaemas.com/opengraph-image.png?552dec655558f188",
+  },
 };
 
 export default function RootLayout({
@@ -25,11 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.className} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${geistSans.className} antialiased`}>{children}</body>
     </html>
   );
 }
