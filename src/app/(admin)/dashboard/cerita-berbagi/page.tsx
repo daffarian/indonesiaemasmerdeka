@@ -1,45 +1,58 @@
-"use client";
-
 import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
 import { setArticleVisible } from "@/lib/action/setArticleVisible";
-import { useState, useEffect } from "react";
 
-export default function Page() {
-  const [isChecked, setIsChecked] = useState(false);
+import Search from "@/components/common/Search";
+import Table from "@/components/common/data/Table";
 
-  // Fungsi untuk mendapatkan status awal artikel
-  const fetchInitialVisibility = async () => {
-    const [isVisible] = await fetchArticleVisible();
-    setIsChecked(isVisible.value === 1); // Set state berdasarkan nilai yang diambil
+import { fetchArticle } from "@/lib/fetch/fetchArticle";
+
+import ToggleVisibility from "@/components/common/ToggleVisibility";
+
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string;
+    page?: string;
   };
+}) {
+  const query = searchParams?.query || "";
+  const currentPage = Number(searchParams?.page) || 1;
 
-  // Fungsi untuk menangani switch
-  const handleSwitch = async () => {
-    if (isChecked) {
-      await setArticleVisible(0); // Menyembunyikan
-      setIsChecked(false);
-    } else {
-      await setArticleVisible(1); // Menampilkan
-      setIsChecked(true);
-    }
-    // console.log(isChecked ? 1 : 0); // Log status yang baru
-  };
-
-  useEffect(() => {
-    fetchInitialVisibility(); // Ambil status awal ketika komponen dimuat
-  }, []);
+  const articles = await fetchArticle();
 
   return (
-    <div className="container py-32">
-      <p>Cerita Berbagi Visible</p>
-      <label className="switch mt-5 block" onClick={handleSwitch}>
-        <input
-          type="checkbox"
-          checked={isChecked} // Mengikat status checkbox ke state
-          onChange={() => {}} // Kosongkan onChange karena kita menangani klik pada label
+    <div className="container py-20 lg:py-24">
+      {/* Heading & Toggle Start */}
+      <div className="shadow-lg p-3 rounded-lg bg-white flex flex-row items-center justify-between">
+        <h1 className="text-lg text-primary">Cerita Berbagi</h1>
+        <ToggleVisibility
+          fetchVisibility={fetchArticleVisible}
+          setVisibility={setArticleVisible}
         />
-        <span className="slider"></span>
-      </label>
+      </div>
+      {/* Heading & Toggle Stop */}
+      {/* Cerita Berbagi Settings Start */}
+      <div className="mt-5 shadow-lg rounded-lg bg-white p-3">
+        {/* Search Start */}
+        <Search placeholder="Cari Artikel" />
+        {/* Search Stop */}
+        {/* Table Start */}
+        <div className="overflow-scroll mt-5">
+          <Table
+            className="text-zinc-500"
+            type="edit"
+            columns={[
+              { key: "title", label: "Judul" },
+              { key: "category", label: "Kategori" },
+              { key: "created_at", label: "Tanggal" },
+            ]}
+            data={articles}
+          />
+        </div>
+        {/* Table Stop */}
+      </div>
+      {/* Cerita Berbagi Settings Stop */}
     </div>
   );
 }

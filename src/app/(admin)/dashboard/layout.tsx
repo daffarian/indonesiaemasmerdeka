@@ -12,7 +12,7 @@ export default async function Layout({
     <>
       <HeaderAdmin isArticleVisible={isArticleVisible.value} />
       <SideNavAdmin />
-      <main>{children}</main>
+      <main className="bg-amber-50">{children}</main>
     </>
   );
 }
