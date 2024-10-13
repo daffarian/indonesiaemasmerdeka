@@ -14,6 +14,7 @@ import Link from "next/link";
 
 import GiftIcon from "../../icons/GiftIcon";
 import NewspaperIcon from "@/components/icons/NewsPaperIcon";
+import LayoutDashboardIcon from "@/components/icons/LayoutDashboardIcon";
 
 export default function MobileNavAdmin({ className }: { className?: string }) {
   const [isOpenNav, setIsOpenNav] = useState(false);
@@ -51,7 +52,18 @@ export default function MobileNavAdmin({ className }: { className?: string }) {
       >
         <div className="container flex flex-col justify-between h-full">
           <div>
-            {/* Help Stop */}
+            {/* Dashboard Start */}
+            <Link
+              href={"/dashboard"}
+              className="hover:text-primary flex flex-row gap-3 hover:bg-zinc-100 px-3 py-3 rounded-lg text-zinc-600 text-base font-medium mt-3"
+              onClick={() => {
+                setIsOpenNav(false);
+              }}
+            >
+              <LayoutDashboardIcon className="text-primary" />
+              Dashboard
+            </Link>
+            {/* Dashboard Stop */}
             {/* History Start */}
             <Link
               href={"/dashboard/cerita-berbagi"}
@@ -60,7 +72,7 @@ export default function MobileNavAdmin({ className }: { className?: string }) {
                 setIsOpenNav(false);
               }}
             >
-              <NewspaperIcon />
+              <NewspaperIcon className="text-primary" />
               Cerita Berbagi
             </Link>
             {/* History Stop */}

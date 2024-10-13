@@ -33,17 +33,11 @@ export default function HeaderAdmin({
         `${className} ${styleOnScroll} transition-all mx-auto fixed bg-white z-50 !w-full py-4`
       )}
     >
-      <div className="container justify-between items-center flex flex-row">
+      <div className="container lg:px-5 justify-between items-center flex flex-row">
         <a href={"/"}>
           <Author className="w-12 lg:w-16 !z-[60]" />
         </a>
         <MobileNavAdmin/>
-        <Link
-          href="/hubungi-kami"
-          className="hidden lg:block text-xs text-wrap w-32 bg-primary p-2 rounded-lg text-white text-center font-medium"
-        >
-          Corporate CSR Collaboration
-        </Link>
       </div>
     </header>
   );

@@ -1,5 +1,5 @@
 import HeaderAdmin from "@/components/common/Layout/HeaderAdmin";
-import SideNavAdmin from "@/components/common/Layout/SideNavAdmin";
+import DesktopNavAdmin from "@/components/common/Layout/DesktopNavAdmin";
 import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
 
 export default async function Layout({
@@ -11,8 +11,10 @@ export default async function Layout({
   return (
     <>
       <HeaderAdmin isArticleVisible={isArticleVisible.value} />
-      <SideNavAdmin />
-      <main className="bg-amber-50">{children}</main>
+      <div className="flex flex-row">
+        <DesktopNavAdmin />
+        <main className="bg-amber-50 w-full rounded-tl-lg">{children}</main>
+      </div>
     </>
   );
 }
