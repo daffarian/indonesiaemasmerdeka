@@ -3,6 +3,9 @@ import { setArticleVisible } from "@/lib/action/setArticleVisible";
 
 import Search from "@/components/common/Search";
 import Table from "@/components/common/data/Table";
+import ButtonCreate from "@/components/common/ButtonCreate";
+import AdminHeading from "@/components/common/AdminHeading";
+import AdminBody from "@/components/common/AdminBody";
 
 import { fetchFilteredArticles } from "@/lib/fetch/fetchArticle";
 
@@ -22,25 +25,29 @@ export default async function Page({
   const articles = await fetchFilteredArticles(query, currentPage);
 
   return (
-    <div className="container lg:px-5 py-20 lg:py-24 rounded-tl-lg">
+    <>
       {/* Heading & Toggle Start */}
-      <div className="shadow-lg p-3 rounded-lg bg-white flex flex-row items-center justify-between">
-        <h1 className="text-lg lg:text-3xl text-primary">Cerita Berbagi</h1>
+      <AdminHeading text="Cerita Berbagi">
         <ToggleVisibility
           fetchVisibility={fetchArticleVisible}
           setVisibility={setArticleVisible}
         />
-      </div>
+      </AdminHeading>
       {/* Heading & Toggle Stop */}
-      {/* Cerita Berbagi Settings Start */}
-      <div className="mt-5 shadow-lg rounded-lg bg-white p-3">
-        {/* Search Start */}
-        <Search placeholder="Cari Artikel" />
-        {/* Search Stop */}
+      <AdminBody>
+        {/* Cerita Berbagi Settings Start */}
+        <div className="flex flex-row justify-between gap-5">
+          {/* Search Start */}
+          <Search placeholder="Cari Artikel" />
+          {/* Search Stop */}
+          {/* Crate Start */}
+          <ButtonCreate href="/dashboard/cerita-berbagi/create" />
+          {/* Crate Stop */}
+        </div>
         {/* Table Start */}
         <div className="overflow-x-scroll mt-14 rounded-lg border">
           <Table
-            className="text-zinc-500"
+            className=""
             type="edit"
             columns={[
               { key: "title", label: "Judul" },
@@ -51,8 +58,8 @@ export default async function Page({
           />
         </div>
         {/* Table Stop */}
-      </div>
+      </AdminBody>
       {/* Cerita Berbagi Settings Stop */}
-    </div>
+    </>
   );
 }

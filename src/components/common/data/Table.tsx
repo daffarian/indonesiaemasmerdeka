@@ -14,7 +14,7 @@ const Table = <T extends object>({
   };
 
   return (
-    <table className={`w-full text-sm text-left text-zinc-500 overflow-x-scroll  ${className}`}>
+    <table className={`w-full text-sm text-left text-zinc-700 overflow-x-scroll  ${className}`}>
       <thead className="uppercase font-bold text-black">
         <tr>
           {columns?.map((column) => (
