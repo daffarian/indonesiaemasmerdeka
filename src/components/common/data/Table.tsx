@@ -1,10 +1,25 @@
 import clsx from "clsx";
 import { TableProps } from "@/types/TableProps";
+
+import DeleteButton from "../Button/DeleteButton";
+import { deleteArticle } from "@/lib/action/deleteArticle";
+
+// DIalog
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
+
 const Table = <T extends object>({
   columns,
   data,
   className,
-  type,
 }: TableProps<T>) => {
   const formatValue = (value: any) => {
     if (value instanceof Date) {
@@ -13,8 +28,15 @@ const Table = <T extends object>({
     return value; // Return value as is if not a Date
   };
 
+  const handleDelete = (slug: any, image_url: any) => {
+    
+    deleteArticle(slug, image_url);
+  };
+
   return (
-    <table className={`w-full text-sm text-left text-zinc-700 overflow-x-scroll  ${className}`}>
+    <table
+      className={`w-full text-sm text-left text-zinc-700 overflow-x-scroll  ${className}`}
+    >
       <thead className="uppercase font-bold text-black">
         <tr>
           {columns?.map((column) => (
@@ -22,13 +44,6 @@ const Table = <T extends object>({
               {column.label}
             </th>
           ))}
-          {type === "edit" ? (
-            <th scope="col" className="px-6 py-3 text-nowrap">
-              AKSI
-            </th>
-          ) : (
-            ""
-          )}
         </tr>
       </thead>
       <tbody>
@@ -44,11 +59,6 @@ const Table = <T extends object>({
                 {formatValue(row[column.key as keyof T])}
               </td>
             ))}
-            {type === "edit" ? (
-              <td className="px-6 py-4 text-nowrap">BTN</td>
-            ) : (
-              ""
-            )}
           </tr>
         ))}
       </tbody>

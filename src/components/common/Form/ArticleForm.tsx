@@ -1,10 +1,19 @@
 "use client";
 import { useState } from "react";
 
+import { useFormStatus } from "react-dom";
+
+// create slug
+import { createSlug } from "@/lib/utils";
+
 // Quill
 import { useQuill } from "react-quilljs";
-
 import "quill/dist/quill.snow.css"; // Add css for snow theme
+
+// submit article
+import addArticle from "@/lib/action/addArticle";
+import { q } from "framer-motion/client";
+import Link from "next/link";
 
 export default function ArticleForm({ className }: { className?: string }) {
   // Quil
@@ -30,41 +39,54 @@ export default function ArticleForm({ className }: { className?: string }) {
     }
   };
 
-  const handleUpload = () => {
-    // Logic untuk mengupload gambar
-    // Misalnya menggunakan Fetch API atau axios
-    console.log("Upload image:", image);
+  const handelSubmit = (formData: FormData) => {
+    addArticle(formData, quill?.getSemanticHTML());
   };
 
-  const handelSubmit = (formData: FormData) => {
-    const rawFormData = {
-      title: formData.get("title"),
-      category: formData.get("category"),
-      description: formData.get("description"),
-      content: quill?.getSemanticHTML(),
-    };
-
-    console.info(rawFormData);
+  const ButtonSubmit = () => {
+    const status = useFormStatus();
+    return (
+      <button
+        disabled={status.pending}
+        type="submit"
+        className="bg-green-500 w-28 h-10 flex items-center justify-center rounded-lg font-medium hover:bg-green-600 text-white"
+      >
+        {status.pending === true ? (
+          <div
+            className="inline-block h-6 w-6 animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
+            role="status"
+          >
+            <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+              Loading...
+            </span>
+          </div>
+        ) : (
+          "Simpan"
+        )}
+      </button>
+    );
   };
 
   return (
     <form action={handelSubmit} className="flex flex-col gap-5">
-      <div className="flex flex-col lg:flex-row gap-10 w-full justify-center items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full justify-center items-center">
         {/* Image Start */}
         <div>
           <input
             type="file"
+            name="image"
             accept="image/*"
             onChange={handleImageChange}
             id="file-input"
             className="file-input hidden cursor-pointer"
+            required
           />
           <label htmlFor="file-input" className="upload-box">
             {preview ? (
               <img
                 src={preview}
                 alt="Preview"
-                className="preview-image cursor-pointer lg:w-96"
+                className="preview-image cursor-pointer w-full"
               />
             ) : (
               <span className="upload-text">
@@ -84,6 +106,7 @@ export default function ArticleForm({ className }: { className?: string }) {
               name="title"
               placeholder="Masukan judul"
               className="border p-3 rounded-lg text-zinc-600"
+              required
             />
           </div>
           {/* Title Stop */}
@@ -97,20 +120,30 @@ export default function ArticleForm({ className }: { className?: string }) {
               name="category"
               className="border border-gray-300 p-3 rounded-lg text-zinc-600 "
               defaultValue={0}
+              required
             >
               <option value={0} disabled className="text-gray-400">
                 Pilih Kategori
               </option>
-              <option value={1} className="rounded-lg hover:bg-primary">
+              <option
+                value={"Kesehatan"}
+                className="rounded-lg hover:bg-primary"
+              >
                 Kesehatan
               </option>
-              <option value={2} className="rounded-lg hover:bg-primary">
+              <option
+                value={"Pendidikan"}
+                className="rounded-lg hover:bg-primary"
+              >
                 Pendidikan
               </option>
-              <option value={3} className="rounded-lg hover:bg-primary">
+              <option value={"UMKM"} className="rounded-lg hover:bg-primary">
                 UMKM
               </option>
-              <option value={4} className="rounded-lg hover:bg-primary">
+              <option
+                value={"Lingkungan"}
+                className="rounded-lg hover:bg-primary"
+              >
                 Lingkungan
               </option>
             </select>
@@ -126,6 +159,7 @@ export default function ArticleForm({ className }: { className?: string }) {
               name="description"
               placeholder="Masukan deskripsi singkat"
               className="border p-3 rounded-lg text-zinc-600"
+              required
             />
           </div>
           {/* Description Stop */}
@@ -135,23 +169,24 @@ export default function ArticleForm({ className }: { className?: string }) {
 
       <div>
         <label htmlFor="editor">Isi Artikel</label>
-        <div className="text-zinc-600 w-full min-h-40" ref={quillRef} />
+        <div
+          className="w-full min-h-40 !text-base text-zinc-600"
+          ref={quillRef}
+        />
       </div>
       {/* Content Stop */}
       {/* Button Start */}
       <div className="flex flex-row gap-5 justify-end">
-        <button className="bg-red-500 px-3 py-2 rounded-lg font-medium hover:bg-red-600 text-white">
-          Batal
-        </button>
-        <button className="bg-yellow-500 px-3 py-2 rounded-lg font-medium hover:bg-yellow-600 text-white">
-          Draf
-        </button>
-        <button
-          type="submit"
-          className="bg-green-500 px-3 py-2 rounded-lg font-medium hover:bg-green-600 text-white"
+        <Link
+          href={"/dashboard/cerita-berbagi"}
+          className="bg-red-500 px-3 py-2 rounded-lg font-medium hover:bg-red-600 text-white"
         >
-          Simpan
-        </button>
+          Batal
+        </Link>
+        {/* <button className="bg-yellow-500 px-3 py-2 rounded-lg font-medium hover:bg-yellow-600 text-white">
+          Draf
+        </button> */}
+        <ButtonSubmit />
       </div>
       {/* Button Stop */}
     </form>

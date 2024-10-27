@@ -2,7 +2,7 @@ import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
 import { setArticleVisible } from "@/lib/action/setArticleVisible";
 
 import Search from "@/components/common/Search";
-import Table from "@/components/common/data/Table";
+import Table from "@/components/Article/Table";
 import ButtonCreate from "@/components/common/ButtonCreate";
 import AdminHeading from "@/components/common/AdminHeading";
 import AdminBody from "@/components/common/AdminBody";
@@ -47,13 +47,6 @@ export default async function Page({
         {/* Table Start */}
         <div className="overflow-x-scroll mt-14 rounded-lg border">
           <Table
-            className=""
-            type="edit"
-            columns={[
-              { key: "title", label: "Judul" },
-              { key: "category", label: "Kategori" },
-              { key: "created_at", label: "Tanggal" },
-            ]}
             data={articles}
           />
         </div>

@@ -1,6 +1,12 @@
+import { Article } from "./Article";
+
 export interface TableProps<T> {
   columns: Column[];
   data?: T[];
   className?: string;
-  type: "display" | "edit";
+}
+
+export interface ShareStoriesTableProps{
+  data?: Article[];
+  className?: string;
 }
