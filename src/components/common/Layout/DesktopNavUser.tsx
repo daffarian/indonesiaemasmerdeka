@@ -24,11 +24,11 @@ export default function DesktopNavUser({
         <NavigationMenuList>
           {/* Pillar Start */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="tracking-wide">
+            <NavigationMenuTrigger className="tracking-wide text-base">
               Pilar
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="!text-sm p-3 w-96 flex flex-col font-thin">
+              <div className="text-base lg:text-lg p-3 w-96 flex flex-col font-thin">
                 <Link href="/">
                   <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
@@ -78,7 +78,7 @@ export default function DesktopNavUser({
 
           {/* Pillar Start */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="tracking-wide">
+            <NavigationMenuTrigger className="tracking-wide text-base">
               Program
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -107,7 +107,7 @@ export default function DesktopNavUser({
           {/* Pillar Stop */}
           {/* Help Start */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="tracking-wide">
+            <NavigationMenuTrigger className="tracking-wide text-base">
               Bantuan
             </NavigationMenuTrigger>
             <NavigationMenuContent className="">
@@ -142,7 +142,7 @@ export default function DesktopNavUser({
             <NavigationMenuItem>
               <Link
                 href={"/cerita-berbagi"}
-                className={`${navigationMenuTriggerStyle()} tracking-wide`}
+                className={`${navigationMenuTriggerStyle()} tracking-wide text-base`}
               >
                 Cerita Berbagi
               </Link>
