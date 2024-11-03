@@ -60,15 +60,17 @@ export default function DesktopNavUser({
                     </p>
                   </div>
                 </Link>
-                <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
-                  <h2 className="text-sm text-zinc-600 group-hover:text-primary">
-                    Lingkungan
-                  </h2>
-                  <p className="text-sm">
-                    Melestarikan dan Menjaga Ekosistem Lingkungan untuk
-                    meningkatkan kualitas hidup
-                  </p>
-                </div>
+                <Link href={"/"}>
+                  <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
+                    <h2 className="text-sm text-zinc-600 group-hover:text-primary">
+                      Lingkungan
+                    </h2>
+                    <p className="text-sm">
+                      Melestarikan dan Menjaga Ekosistem Lingkungan untuk
+                      meningkatkan kualitas hidup
+                    </p>
+                  </div>
+                </Link>
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>

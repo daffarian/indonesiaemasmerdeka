@@ -29,7 +29,6 @@ export default async function addArticle(formData: FormData, content?: string) {
     `./public/images/article/yayasanindonesiaemas_${imageName}${fileExtention}`,
     buffer
   );
-  console.log(rawFormData);
 
   try {
     await db.query(

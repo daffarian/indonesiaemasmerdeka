@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { ShareStoriesTableProps } from "@/types/TableProps";
 
 import DeleteButton from "./DeleteButton";
+import Link from "next/link";
 
 const Table = ({ data, className }: ShareStoriesTableProps) => {
   const formatValue = (value: any) => {
@@ -48,9 +49,12 @@ const Table = ({ data, className }: ShareStoriesTableProps) => {
                 <DeleteButton slug={row.slug} image_url={row.image_url} />
                 {/* Button Delete Stop */}
 
-                <button className="bg-blue-50 w-16 hover:bg-blue-500 hover:text-white text-blue-500 rounded-lg px-2 py-1">
+                <Link
+                  href={`/dashboard/cerita-berbagi/${row.slug}/edit`}
+                  className="bg-blue-50 w-16 hover:bg-blue-500 hover:text-white text-blue-500 rounded-lg px-2 py-1"
+                >
                   Edit
-                </button>
+                </Link>
               </div>
             </td>
           </tr>

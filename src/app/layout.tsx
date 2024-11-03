@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -13,13 +14,20 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const outfit = Outfit({
+  variable: "--font-fira-sans",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://yayasanindonesiaemas.com"),
   title: "Yayasan Indonesia Emas Merdeka",
   description:
     "Dukung program kesehatan, pemerataan akses pendidikan, pemberdayaan UMKM, dan pelestarian lingkungan untuk meningkatkan kualitas hidup masyarakat Indonesia secara berkelanjutan.",
   openGraph: {
-    images: "https://yayasanindonesiaemas.com/opengraph-image.png?552dec655558f188",
+    images:
+      "https://yayasanindonesiaemas.com/opengraph-image.png?552dec655558f188",
   },
 };
 
@@ -30,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.className} antialiased`}>{children}</body>
+      <body className={`${outfit.className} antialiased`}>{children}</body>
     </html>
   );
 }

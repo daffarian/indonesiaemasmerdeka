@@ -7,7 +7,7 @@ export async function fetchArticle() {
   noStore();
   try {
     const data = await db.query(
-      `SELECT id, title, slug, description, content, created_at, image_url, category FROM article WHERE status = 'published'`
+      `SELECT * FROM article WHERE status = 'published'`
     );
     return data[0] as any;
   } catch (err) {
@@ -20,7 +20,7 @@ export async function fetchArticleBySlug(slug: string) {
   noStore();
   try {
     const data = await db.query(
-      "SELECT id, title, content, created_at, image_url, category FROM article WHERE status = ? AND slug = ?",
+      "SELECT id, title, slug, description, content, created_at, image_url, category FROM article WHERE status = ? AND slug = ?",
       ["published", slug]
     );
     return data[0] as any;

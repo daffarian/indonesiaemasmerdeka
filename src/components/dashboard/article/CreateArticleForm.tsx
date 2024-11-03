@@ -3,19 +3,15 @@ import { useState } from "react";
 
 import { useFormStatus } from "react-dom";
 
-// create slug
-import { createSlug } from "@/lib/utils";
-
 // Quill
 import { useQuill } from "react-quilljs";
 import "quill/dist/quill.snow.css"; // Add css for snow theme
 
 // submit article
 import addArticle from "@/lib/action/addArticle";
-import { q } from "framer-motion/client";
 import Link from "next/link";
 
-export default function ArticleForm({ className }: { className?: string }) {
+export default function CreateArticleForm({ className }: { className?: string }) {
   // Quil
   const { quill, quillRef } = useQuill();
 
@@ -69,9 +65,9 @@ export default function ArticleForm({ className }: { className?: string }) {
 
   return (
     <form action={handelSubmit} className="flex flex-col gap-5">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full justify-center items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-full justify-center items-center">
         {/* Image Start */}
-        <div>
+        <div className="">
           <input
             type="file"
             name="image"
