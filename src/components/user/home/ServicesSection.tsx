@@ -1,8 +1,8 @@
 "use client";
-import CrossIcon from "../icons/HealthIcon";
-import GraduationCapIcon from "../icons/GraduationCapIcon";
-import FlowerIcon from "../icons/FlowerIcon";
-import StoreIcon from "../icons/StoreIcon";
+import CrossIcon from "../../icons/HealthIcon";
+import GraduationCapIcon from "../../icons/GraduationCapIcon";
+import FlowerIcon from "../../icons/FlowerIcon";
+import StoreIcon from "../../icons/StoreIcon";
 import Link from "next/link";
 import "react-multi-carousel/lib/styles.css";
 

@@ -1,6 +1,6 @@
-import AdminBody from "@/components/common/AdminBody";
-import AdminHeading from "@/components/common/AdminHeading";
-import EditArticleForm from "@/components/dashboard/article/EditArticleForm";
+import AdminBody from "@/components/admin/AdminBody";
+import AdminHeading from "@/components/admin/AdminHeading";
+import EditArticleForm from "@/components/admin/article/EditArticleForm";
 
 import { fetchArticleBySlug } from "@/lib/fetch/fetchArticle";
 export default async function Page({ params }: { params: { slug: string } }) {

@@ -1,6 +1,6 @@
-import TargetIcon from "../icons/TergetIcon";
-import SendIcon from "../icons/SendIcon";
-import MonitorIcon from "../icons/MonitorIcon";
+import TargetIcon from "../../icons/TergetIcon";
+import SendIcon from "../../icons/SendIcon";
+import MonitorIcon from "../../icons/MonitorIcon";
 
 export default function FeaturedSection({ className }: { className?: string }) {
   return (

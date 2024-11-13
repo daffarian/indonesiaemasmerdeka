@@ -12,35 +12,37 @@
 
 /* Scroll Bar */
 /* CSS untuk mengubah gaya scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #dab96b;
-  border-radius: 2rem;
+  ::-webkit-scrollbar-thumb {
+    background: #dab96b;
+    border-radius: 2rem;
+  }
 }
 
 /* Scroll bar stop */
 
 h1 {
-  @apply text-4xl font-extrabold lg:text-5xl;
+  @apply text-4xl font-extrabold lg:text-5xl text-zinc-700;
 }
 
 h2 {
-  @apply text-xl font-bold lg:text-3xl;
+  @apply text-xl font-bold lg:text-3xl text-zinc-700;
 }
 
 h3 {
-  @apply text-lg font-bold lg:text-2xl;
+  @apply text-lg font-bold lg:text-2xl text-zinc-700;
 }
 
 h4 {
-  @apply lg:text-xl;
+  @apply lg:text-xl text-zinc-700;
 }
 
 label {
@@ -48,7 +50,7 @@ label {
 }
 
 p {
-  @apply lg:text-lg;
+  @apply lg:text-lg text-zinc-600;
 }
 /* p,
 span,

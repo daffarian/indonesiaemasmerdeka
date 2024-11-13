@@ -15,7 +15,7 @@ export default function FooterUser({ className }: { className?: string }) {
         <div className="flex flex-col lg:flex-row justify-between">
           <address className="not-italic mb-10 max-w-80">
             <Author className="w-14 mb-7" />
-            <p className="mb-7 text-base">
+            <p className="mb-7 text-base text-white">
               Komp Taman Mangu Indah I 2/16, Jurang Mangu Barat, Pondok Aren,
               Tangerang Selatan 15223
             </p>
@@ -96,7 +96,7 @@ export default function FooterUser({ className }: { className?: string }) {
         <FollowUs  />
 
         {/* Sosmed Stop */}
-        <p className="text-sm text-center lg:text-start mt-8">
+        <p className="text-sm text-center lg:text-start mt-8 text-white">
           Copyright &copy; 2024 Yayasan Indonesia Emas
         </p>
       </div>

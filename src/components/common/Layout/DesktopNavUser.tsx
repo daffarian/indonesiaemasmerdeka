@@ -29,7 +29,7 @@ export default function DesktopNavUser({
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <div className="text-base lg:text-lg p-3 w-96 flex flex-col font-thin">
-                <Link href="/">
+                <Link href="/pilar/kesehatan">
                   <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       Kesehatan

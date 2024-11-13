@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Author from "../common/Author";
+import Author from "../../common/Author";
 
 export default function AboutSection({ className }: { className?: string }) {
   return (

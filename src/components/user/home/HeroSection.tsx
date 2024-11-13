@@ -12,7 +12,7 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import { Pagination, Autoplay, EffectFade } from "swiper/modules";
 
-export default function HomeSection({ className }: { className?: string }) {
+export default function HeroSection({ className }: { className?: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Referensi untuk Swiper lainnya

@@ -2,10 +2,10 @@ import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
 import { setArticleVisible } from "@/lib/action/setArticleVisible";
 
 import Search from "@/components/common/Search";
-import Table from "@/components/dashboard/article/Table";
+import Table from "@/components/admin/article/Table";
 import ButtonCreate from "@/components/common/ButtonCreate";
-import AdminHeading from "@/components/common/AdminHeading";
-import AdminBody from "@/components/common/AdminBody";
+import AdminHeading from "@/components/admin/AdminHeading";
+import AdminBody from "@/components/admin/AdminBody";
 
 import { fetchFilteredArticles } from "@/lib/fetch/fetchArticle";
 

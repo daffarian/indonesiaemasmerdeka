@@ -64,13 +64,13 @@ export default function MobileNavUser({
                 </AccordionTrigger>
                 <AccordionContent>
                   <Link
-                    href="/"
+                    href="/pilar/kesehatan"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 text-base hover:text-primary">
                       Kesehatan
                     </div>
                   </Link>
@@ -81,7 +81,7 @@ export default function MobileNavUser({
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 text-base hover:text-primary">
                       Pendidikan
                     </div>
                   </Link>
@@ -92,7 +92,7 @@ export default function MobileNavUser({
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 text-base hover:text-primary">
                       UMKM
                     </div>
                   </Link>
@@ -103,7 +103,7 @@ export default function MobileNavUser({
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 text-base hover:text-primary">
                       Lingkungan
                     </div>
                   </Link>
@@ -125,7 +125,7 @@ export default function MobileNavUser({
                   >
                     <div className="px-3 py-2 rounded-lg hover:text-primary flex items-center">
                       <GiftIcon className="mr-2 text-primary inline w-5 h-5" />
-                      <span className="text-zinc-600">Donasi</span>
+                      <span className="text-zinc-600 text-base">Donasi</span>
                     </div>
                   </Link>
                 </AccordionContent>
@@ -144,7 +144,7 @@ export default function MobileNavUser({
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 text-base hover:text-primary">
                       FAQ
                     </div>
                   </Link>
@@ -155,7 +155,7 @@ export default function MobileNavUser({
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 text-base hover:text-primary">
                       Kebijakan Privasi
                     </div>
                   </Link>
@@ -166,7 +166,7 @@ export default function MobileNavUser({
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg text-zinc-600 hover:text-primary">
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 text-base hover:text-primary">
                       Syarat Pengguna
                     </div>
                   </Link>
