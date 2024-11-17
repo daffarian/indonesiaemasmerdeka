@@ -1,10 +1,10 @@
 import { CardArticleTypes } from "@/types/CardArticle";
 import Link from "next/link";
 
-export default function CardArticle(article:CardArticleTypes) {
+export default function CardArticle(article: CardArticleTypes) {
   return (
     <div
-      className="border-[1px] border-zinc-200 rounded-3xl p-5 bg-white shadow-md"
+      className={`${article.className} border-[1px] border-zinc-200 rounded-3xl p-5 bg-white shadow-md`}
     >
       {/* Images Start */}
       <div className="">

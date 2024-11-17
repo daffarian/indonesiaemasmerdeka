@@ -1,4 +1,4 @@
-export interface CardArticleTypes{
+export interface CardArticleTypes {
   id: number;
   image_url: string;
   date: Date;
@@ -6,4 +6,5 @@ export interface CardArticleTypes{
   title: string;
   description: string;
   slug: string;
+  className?: string;
 }

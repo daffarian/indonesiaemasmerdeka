@@ -4,9 +4,9 @@ import { fetchArticleByCategory } from "@/lib/fetch/fetchArticle";
 export default async function ArticleSection() {
   const article: Article[] = await fetchArticleByCategory("Kesehatan");
   return (
-    <div className="container">
+    <>
       {article?.length > 0 && (
-        <>
+        <div className="container">
           <h2 className="text-primary my-10">Cerita Berbagi</h2>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             {article.map((value: any, index: number) => (
@@ -19,11 +19,12 @@ export default async function ArticleSection() {
                 slug={value.slug}
                 title={value.title}
                 key={index}
+                className={'mb-10 lg:mb-20'}
               />
             ))}
           </div>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 }

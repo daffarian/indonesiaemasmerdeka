@@ -1,6 +1,6 @@
 export default function SdgsSection() {
   return (
-    <section className="bg-secondary rounded-t-[2rem] md:rounded-t-[8rem] py-10">
+    <section className="bg-secondary rounded-[2rem] md:rounded-[8rem] py-10">
       <div className="container">
         <h2 className="text-center">
           Kontribusi terhadap <span className="text-accent">SDGs</span>
