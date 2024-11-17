@@ -34,9 +34,9 @@ export default function HeaderAdmin({
       )}
     >
       <div className="container lg:px-5 justify-between items-center flex flex-row">
-        <a href={"/"}>
+        <Link href={"/"}>
           <Author className="w-12 lg:w-16 !z-[60]" />
-        </a>
+        </Link>
         <MobileNavAdmin/>
       </div>
     </header>

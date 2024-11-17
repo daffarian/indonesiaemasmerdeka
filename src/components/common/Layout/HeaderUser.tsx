@@ -37,9 +37,9 @@ export default function HeaderUser({
       )}
     >
       <div className="container justify-between items-center flex flex-row">
-        <a href={"/"}>
+        <Link href={"/"}>
           <Author className="w-12 lg:w-16 !z-[60]" />
-        </a>
+        </Link>
         <DesktopNavUser isArticleVisible={isArticleVisible} />
         <MobileNavUser isArticleVisible={isArticleVisible} />
         <Link
