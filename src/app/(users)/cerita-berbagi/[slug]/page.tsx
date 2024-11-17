@@ -12,7 +12,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           <img
             src={articleBySlug.image_url}
             alt=""
-            className="rounded-3xl w-full"
+            className="rounded-3xl w-full aspect-video object-cover"
           />
         </div>
         {/* Images Stop */}

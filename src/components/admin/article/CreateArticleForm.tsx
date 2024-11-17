@@ -82,7 +82,7 @@ export default function CreateArticleForm({ className }: { className?: string })
               <img
                 src={preview}
                 alt="Preview"
-                className="preview-image cursor-pointer w-full"
+                className="preview-image cursor-pointer w-full aspect-video"
               />
             ) : (
               <span className="upload-text">
@@ -141,6 +141,12 @@ export default function CreateArticleForm({ className }: { className?: string })
                 className="rounded-lg hover:bg-primary"
               >
                 Lingkungan
+              </option>
+              <option
+                value={"Artikel"}
+                className="rounded-lg hover:bg-primary"
+              >
+                Artikel
               </option>
             </select>
           </div>

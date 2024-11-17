@@ -156,6 +156,12 @@ export default function EditArticleForm({
               >
                 Lingkungan
               </option>
+              <option
+                value={"Lingkungan"}
+                className="rounded-lg hover:bg-primary"
+              >
+                Artikel
+              </option>
             </select>
           </div>
 

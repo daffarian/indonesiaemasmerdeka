@@ -2,6 +2,8 @@
 import { unstable_noStore as noStore } from "next/cache";
 import { db } from "../db";
 
+import { Article } from "@/types/Article";
+
 // Fetch articles
 export async function fetchArticle() {
   noStore();
@@ -22,6 +24,20 @@ export async function fetchArticleBySlug(slug: string) {
     const data = await db.query(
       "SELECT id, title, slug, description, content, created_at, image_url, category FROM article WHERE status = ? AND slug = ?",
       ["published", slug]
+    );
+    return data[0] as any;
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+// Article by category
+export async function fetchArticleByCategory(category: string) {
+  noStore();
+  try {
+    const data = await db.query(
+      "SELECT id, title, slug, description, content, created_at, image_url, category FROM article WHERE status = ? AND category = ?",
+      ["published", category]
     );
     return data[0] as any;
   } catch (err) {

@@ -142,7 +142,7 @@ export default function DesktopNavUser({
             <NavigationMenuItem>
               <Link
                 href={"/cerita-berbagi"}
-                className={`${navigationMenuTriggerStyle()} tracking-wide text-base`}
+                className={`${navigationMenuTriggerStyle()} tracking-wide !text-base`}
               >
                 Cerita Berbagi
               </Link>
