@@ -28,25 +28,25 @@ export default function DesktopNavUser({
               Pilar
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="text-base lg:text-lg p-3 w-96 flex flex-col font-thin">
+              <div className="text-base lg:text-lg p-3 w-96 flex flex-col">
                 <Link href="/pilar/kesehatan">
                   <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       Kesehatan
                     </h2>
-                    <p className="text-sm">
-                      Dukung Program untuk masyarakat Indonesia
+                    <p className="text-sm text-zinc-500">
+                      Dukung Program untuk Masyarakat Indonesia
                     </p>
                   </div>
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/pilar/pendidikan"}>
                   <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       Pendidikan
                     </h2>
-                    <p className="text-sm">
-                      Dukung Program pemerataan akses pendidikan dan peningkatan
-                      kemampuan lulusan
+                    <p className="text-sm text-zinc-500">
+                      Dukung Program Pemerataan Akses Pendidikan dan Peningkatan
+                      Kemampuan Lulusan
                     </p>
                   </div>
                 </Link>
@@ -55,8 +55,8 @@ export default function DesktopNavUser({
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       UMKM
                     </h2>
-                    <p className="text-sm">
-                      Dukung dan memberdayakan usaha kecil dan menengah
+                    <p className="text-sm text-zinc-500">
+                      Dukung dan Memberdayakan Usaha Kecil dan Menengah
                     </p>
                   </div>
                 </Link>
@@ -65,9 +65,9 @@ export default function DesktopNavUser({
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       Lingkungan
                     </h2>
-                    <p className="text-sm">
+                    <p className="text-sm text-zinc-500">
                       Melestarikan dan Menjaga Ekosistem Lingkungan untuk
-                      meningkatkan kualitas hidup
+                      Meningkatkan Kualitas Hidup
                     </p>
                   </div>
                 </Link>
@@ -96,7 +96,7 @@ export default function DesktopNavUser({
                     </h2>
                     <p className="font-thin mt-5">#Waktunya Berbagi</p>
                     <span className="px-3 py-2 mt-10 rounded-lg text-white hover:shadow-2xl inline-flex bg-primary">
-                      <Link href={"/"}>Lihat Selengkapnya</Link>
+                      <Link href={"/hubungi-kami"}>Lihat Selengkapnya</Link>
                     </span>
                     <GiftIcon className="absolute bottom-3 right-3 text-primary w-12 h-12 opacity-30" />
                   </div>

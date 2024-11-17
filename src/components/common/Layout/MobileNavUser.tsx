@@ -75,7 +75,7 @@ export default function MobileNavUser({
                     </div>
                   </Link>
                   <Link
-                    href="/"
+                    href="/pilar/pendidikan"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);
