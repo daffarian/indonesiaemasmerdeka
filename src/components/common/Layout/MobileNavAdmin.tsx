@@ -15,6 +15,7 @@ import Link from "next/link";
 import GiftIcon from "../../icons/GiftIcon";
 import NewspaperIcon from "@/components/icons/NewsPaperIcon";
 import LayoutDashboardIcon from "@/components/icons/LayoutDashboardIcon";
+import CircleHelpIcon from "@/components/icons/CircleHelpIcon";
 
 export default function MobileNavAdmin({ className }: { className?: string }) {
   const [isOpenNav, setIsOpenNav] = useState(false);
@@ -76,6 +77,18 @@ export default function MobileNavAdmin({ className }: { className?: string }) {
               Cerita Berbagi
             </Link>
             {/* History Stop */}
+            {/* Faq Start */}
+            <Link
+              href={"/dashboard/faq"}
+              className="hover:text-primary flex flex-row gap-3 hover:bg-zinc-100 px-3 py-3 rounded-lg text-zinc-600 text-base font-medium mt-3"
+              onClick={() => {
+                setIsOpenNav(false);
+              }}
+            >
+              <CircleHelpIcon className="text-primary" />
+              Faq
+            </Link>
+            {/* Faq Stop */}
           </div>
         </div>
         <div className="container absolute bottom-[1rem]">

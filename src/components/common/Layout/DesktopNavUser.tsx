@@ -50,7 +50,7 @@ export default function DesktopNavUser({
                     </p>
                   </div>
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/pilar/umkm"}>
                   <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       UMKM
@@ -60,7 +60,7 @@ export default function DesktopNavUser({
                     </p>
                   </div>
                 </Link>
-                <Link href={"/"}>
+                <Link href={"/pilar/lingkungan"}>
                   <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       Lingkungan
@@ -112,7 +112,7 @@ export default function DesktopNavUser({
             </NavigationMenuTrigger>
             <NavigationMenuContent className="">
               <div className="!text-sm p-3 w-96 flex flex-col">
-                <Link href="/">
+                <Link href="/faq">
                   <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       FAQ

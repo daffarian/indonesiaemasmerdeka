@@ -32,8 +32,8 @@ const Table = ({ data, className }: ShareStoriesTableProps) => {
           </th>
         </tr>
       </thead>
-      <tbody>
-        {data?.map((row, rowIndex) => (
+      {data && data.length > 0 ? (data?.map((row, rowIndex) => (
+        <tbody>
           <tr
             className={clsx("", {
               "bg-zinc-100": (rowIndex + 1) % 2 == 0,
@@ -58,8 +58,17 @@ const Table = ({ data, className }: ShareStoriesTableProps) => {
               </div>
             </td>
           </tr>
-        ))}
-      </tbody>
+        </tbody>
+      ))):(
+        <tbody>
+          <tr>
+            <td colSpan={4}>
+          <div className="text-center py-4">Data masih kosong</div>
+
+            </td>
+          </tr>
+        </tbody>
+      )}
     </table>
   );
 };

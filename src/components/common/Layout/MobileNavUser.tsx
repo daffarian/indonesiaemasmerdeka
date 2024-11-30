@@ -97,7 +97,7 @@ export default function MobileNavUser({
                     </div>
                   </Link>
                   <Link
-                    href="/"
+                    href="/pilar/umkm"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);
@@ -117,7 +117,7 @@ export default function MobileNavUser({
                 </AccordionTrigger>
                 <AccordionContent>
                   <Link
-                    href="/"
+                    href="/pilar/lingkungan"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);
@@ -138,7 +138,7 @@ export default function MobileNavUser({
                 </AccordionTrigger>
                 <AccordionContent>
                   <Link
-                    href="/"
+                    href="/faq"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);

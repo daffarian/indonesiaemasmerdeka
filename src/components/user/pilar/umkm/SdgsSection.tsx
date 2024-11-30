@@ -13,18 +13,23 @@ export default function SdgsSection() {
           />
           <img
             className="w-16 lg:w-28 rounded-lg"
-            src="/images/sdgs-logo/sdgs-2.png"
-            alt="sdgs-2"
-          />
-          <img
-            className="w-16 lg:w-28 rounded-lg"
-            src="/images/sdgs-logo/sdgs-3.png"
-            alt="sdgs-3"
-          />
-          <img
-            className="w-16 lg:w-28 rounded-lg"
             src="/images/sdgs-logo/sdgs-5.png"
             alt="sdgs-5"
+          />
+          <img
+            className="w-16 lg:w-28 rounded-lg"
+            src="/images/sdgs-logo/sdgs-8.png"
+            alt="sdgs-8"
+          />
+          <img
+            className="w-16 lg:w-28 rounded-lg"
+            src="/images/sdgs-logo/sdgs-10.png"
+            alt="sdgs-10"
+          />
+          <img
+            className="w-16 lg:w-28 rounded-lg"
+            src="/images/sdgs-logo/sdgs-11.png"
+            alt="sdgs-11"
           />
         </div>
       </div>
