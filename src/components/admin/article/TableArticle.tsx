@@ -4,7 +4,7 @@ import { ShareStoriesTableProps } from "@/types/TableProps";
 import DeleteButton from "./DeleteButton";
 import Link from "next/link";
 
-const Table = ({ data, className }: ShareStoriesTableProps) => {
+const TableArticle = ({ data, className }: ShareStoriesTableProps) => {
   const formatValue = (value: any) => {
     if (value instanceof Date) {
       return value.toLocaleDateString(); // Format tanggal menjadi string
@@ -73,4 +73,4 @@ const Table = ({ data, className }: ShareStoriesTableProps) => {
   );
 };
 
-export default Table;
+export default TableArticle;

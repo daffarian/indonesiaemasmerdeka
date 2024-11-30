@@ -1,6 +1,9 @@
 import { CardArticleTypes } from "@/types/CardArticle";
 import Link from "next/link";
 
+// max words
+import { setMaxWords } from "@/lib/utils";
+
 export default function CardArticle(article: CardArticleTypes) {
   return (
     <div
@@ -37,12 +40,7 @@ export default function CardArticle(article: CardArticleTypes) {
 
       {/* Content Start */}
       <div className="text-zinc-600">
-        {(() => {
-          const words = article.description.split(" "); // Memisahkan kata
-          return words.length > 100
-            ? words.slice(0, 20).join(" ") + "..." // Menggabungkan kembali kata dan menambahkan '...'
-            : article.description; // Mengembalikan teks asli jika kurang dari 100 kata
-        })()}
+        {setMaxWords(article.description, 20)}
       </div>
       {/* Content Stop */}
       {/* Link Start */}

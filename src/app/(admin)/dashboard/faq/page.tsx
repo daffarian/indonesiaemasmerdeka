@@ -1,15 +1,11 @@
-import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
-import { setArticleVisible } from "@/lib/action/setArticleVisible";
-
 import Search from "@/components/common/Search";
-import Table from "@/components/admin/article/Table";
+import TableFaq from "@/components/admin/faq/TableFaq";
 import ButtonCreate from "@/components/common/ButtonCreate";
 import AdminHeading from "@/components/admin/AdminHeading";
 import AdminBody from "@/components/admin/AdminBody";
 
-import { fetchFilteredArticles } from "@/lib/fetch/fetchArticle";
+import { fetchFilteredFaq } from "@/lib/fetch/fetchFaq";
 
-import ToggleVisibility from "@/components/common/ToggleVisibility";
 
 export default async function Page({
   searchParams,
@@ -22,17 +18,12 @@ export default async function Page({
   const query = searchParams?.query || "";
   const currentPage = Number(searchParams?.page) || 1;
 
-  const articles = await fetchFilteredArticles(query, currentPage);
+  const faq = await fetchFilteredFaq(query, currentPage);
 
   return (
     <>
       {/* Heading & Toggle Start */}
-      <AdminHeading text="FAQ">
-        <ToggleVisibility
-          fetchVisibility={fetchArticleVisible}
-          setVisibility={setArticleVisible}
-        />
-      </AdminHeading>
+      <AdminHeading text="FAQ"/>
       {/* Heading & Toggle Stop */}
       <AdminBody>
         {/* Cerita Berbagi Settings Start */}
@@ -46,8 +37,8 @@ export default async function Page({
         </div>
         {/* Table Start */}
         <div className="overflow-x-scroll mt-14 rounded-lg border">
-          <Table
-            data={articles}
+          <TableFaq
+            data={faq}
           />
         </div>
         {/* Table Stop */}

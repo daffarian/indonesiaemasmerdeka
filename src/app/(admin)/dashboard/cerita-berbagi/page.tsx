@@ -2,7 +2,7 @@ import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
 import { setArticleVisible } from "@/lib/action/setArticleVisible";
 
 import Search from "@/components/common/Search";
-import Table from "@/components/admin/article/Table";
+import Table from "@/components/admin/article/TableArticle";
 import ButtonCreate from "@/components/common/ButtonCreate";
 import AdminHeading from "@/components/admin/AdminHeading";
 import AdminBody from "@/components/admin/AdminBody";

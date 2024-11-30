@@ -12,19 +12,17 @@
 
 /* Scroll Bar */
 /* CSS untuk mengubah gaya scrollbar */
-@layer utilities {
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
+::-webkit-scrollbar {
+  width: 10px;
+}
 
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background: #dab96b;
-    border-radius: 2rem;
-  }
+::-webkit-scrollbar-thumb {
+  background: #dab96b;
+  border-radius: 2rem;
 }
 
 /* Scroll bar stop */

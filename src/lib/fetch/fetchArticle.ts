@@ -65,6 +65,6 @@ export async function fetchFilteredArticles(query: string, page: number) {
     return data[0] as any;
   } catch (err) {
     console.error("Database Error:", err);
-    throw new Error("Failed to fetch article table.");
+    throw new Error("Failed to fetch article.");
   }
 }

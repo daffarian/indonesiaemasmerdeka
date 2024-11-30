@@ -1,4 +1,5 @@
 import { Article } from "./Article";
+import { Faq } from "./Faq";
 
 export interface TableProps<T> {
   columns: Column[];
@@ -7,6 +8,11 @@ export interface TableProps<T> {
 }
 
 export interface ShareStoriesTableProps{
-  data?: Article[];
+  data: Article[];
+  className?: string;
+}
+
+export interface FaqTableProps{
+  data: Faq[];
   className?: string;
 }

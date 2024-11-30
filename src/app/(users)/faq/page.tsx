@@ -5,7 +5,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+// faq types
+import { Faq } from "@/types/Faq";
+
+// Fetch Faq
+import { fetchFaq } from "@/lib/fetch/fetchFaq";
+
 export default async function Page() {
+  const faq = await fetchFaq();
   return (
     <section className="py-16 lg:py-20">
       {/* Heading Start */}
@@ -16,39 +23,26 @@ export default async function Page() {
       </div>
       {/* Heading Stop */}
       {/* Faq Start */}
-      <div className="container mt-10 ">
+      <dl className="container mt-10 ">
         <Accordion type="single" collapsible className="flex flex-col gap-5">
-          <AccordionItem
-            value="item-1"
-            className="border p-5 rounded-xl"
-          >
-            <AccordionTrigger className="text-left text-base py-0">
-              {`1. `}Apakah kegiatan penggalangan dana memiliki lisensi ?
-            </AccordionTrigger>
-            <AccordionContent className="bg-zinc-100 p-5 rounded-xl text-base mt-4">
-              Kegiatan operasional penggalangan dana di BenihBaik.com telah
-              mendapatkan Izin Pengumpulan Uang atau Barang dari Kementerian
-              Sosial Republik Indonesia berdasarkan Surat Keputusan Menteri
-              Sosial Republik Indonesia Nomor 19 : 190/HUK-PS/2024 (untuk
-              kategori Non Bencana) dan Surat Keputusan Menteri Sosial Republik
-              Indonesia Nomor 15 : 259/HUK-PS/2024 (untuk kategori Bencana).
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-2" className="border p-5 rounded-xl">
-            <AccordionTrigger className="text-left text-base py-0">
-              {`2. `}Apakah kegiatan penggalangan dana memiliki lisensi ?
-            </AccordionTrigger>
-            <AccordionContent className="bg-zinc-100 p-5 rounded-xl text-base mt-4">
-              Kegiatan operasional penggalangan dana di BenihBaik.com telah
-              mendapatkan Izin Pengumpulan Uang atau Barang dari Kementerian
-              Sosial Republik Indonesia berdasarkan Surat Keputusan Menteri
-              Sosial Republik Indonesia Nomor 19 : 190/HUK-PS/2024 (untuk
-              kategori Non Bencana) dan Surat Keputusan Menteri Sosial Republik
-              Indonesia Nomor 15 : 259/HUK-PS/2024 (untuk kategori Bencana).
-            </AccordionContent>
-          </AccordionItem>
+            {faq?.map((value: Faq, index: number) => (
+              <AccordionItem
+                value={`item-${index + 1}`}
+                className="border p-5 rounded-xl"
+                key={value.id}
+              >
+                <AccordionTrigger className="text-left text-base py-0">
+                  <dt className="text-base font-normal">{`${index + 1}.  ${
+                    value.question
+                  }`}</dt>
+                </AccordionTrigger>
+                <AccordionContent className="bg-zinc-100 p-5 rounded-xl text-base mt-4">
+                  <dd dangerouslySetInnerHTML={{ __html: value.answer }}></dd>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
         </Accordion>
-      </div>
+      </dl>
       {/* Faq Stop */}
     </section>
   );
