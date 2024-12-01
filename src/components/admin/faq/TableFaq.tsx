@@ -34,17 +34,24 @@ const TableFaq = ({ data, className }: FaqTableProps) => {
           </th>
         </tr>
       </thead>
-      {data && data.length > 0 ? (
-        data?.map((row, rowIndex) => (
-          <tbody>
+      <tbody>
+        {data && data.length > 0 ? (
+          data?.map((row, rowIndex) => (
             <tr
               className={clsx("", {
                 "bg-zinc-100": (rowIndex + 1) % 2 == 0,
               })}
               key={rowIndex}
             >
-              <td className="px-6 py-4">{setMaxWords(row.question, 20)}</td>
-              <td className="px-6 py-4">{setMaxWords(row.answer, 20)}</td>
+              <td className="px-6 py-4">
+                {setMaxWords(row.question, 10)}
+              </td>
+              <td
+                className="px-6 py-4 min-w-32 prose prose-p:text-sm"
+                dangerouslySetInnerHTML={{
+                  __html: setMaxWords(row.answer, 10),
+                }}
+              ></td>
               <td className="px-6 py-4">{formatValue(row.created_at)}</td>
               <td className="px-6 !h-full text-nowrap">
                 <div className="flex flex-row justify-start items-center gap-2">
@@ -61,17 +68,15 @@ const TableFaq = ({ data, className }: FaqTableProps) => {
                 </div>
               </td>
             </tr>
-          </tbody>
-        ))
-      ) : (
-        <tbody>
+          ))
+        ) : (
           <tr>
             <td colSpan={4}>
-              <div className="text-center py-4">Data masih kosong</div>
+              <div className="text-center py-4">Data tidak ditemukan</div>
             </td>
           </tr>
-        </tbody>
-      )}
+        )}
+      </tbody>
     </table>
   );
 };

@@ -24,20 +24,20 @@ export default async function Page() {
       {/* Heading Stop */}
       {/* Faq Start */}
       <dl className="container mt-10 ">
-        <Accordion type="single" collapsible className="flex flex-col gap-5">
+        <Accordion type="single" collapsible className="flex flex-col gap-5 items-center">
             {faq?.map((value: Faq, index: number) => (
               <AccordionItem
                 value={`item-${index + 1}`}
-                className="border p-5 rounded-xl"
+                className="border p-5 rounded-xl w-full lg:w-[50rem]"
                 key={value.id}
               >
                 <AccordionTrigger className="text-left text-base py-0">
-                  <dt className="text-base font-normal">{`${index + 1}.  ${
+                  <dt className="text-base font-normal lg:text-lg">{`${index + 1}.  ${
                     value.question
                   }`}</dt>
                 </AccordionTrigger>
                 <AccordionContent className="bg-zinc-100 p-5 rounded-xl text-base mt-4">
-                  <dd dangerouslySetInnerHTML={{ __html: value.answer }}></dd>
+                  <dd className="prose" dangerouslySetInnerHTML={{ __html: value.answer }}></dd>
                 </AccordionContent>
               </AccordionItem>
             ))}

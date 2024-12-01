@@ -44,7 +44,7 @@ export default async function addArticle(formData: FormData, content?: string) {
       ]
     );
   } catch (err) {
-    console.error("Error updating article visibility:", err);
+    console.error("Error add article:", err);
   }
 
   revalidatePath("/dashboard/cerita-berbagi");

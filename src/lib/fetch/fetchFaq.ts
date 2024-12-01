@@ -21,6 +21,27 @@ export async function fetchFaq() {
   }
 }
 
+// fetch Faq
+export async function fetchFaqById(id: number) {
+  noStore();
+  try {
+    const data = await db.query(
+      `
+		SELECT
+        *
+      FROM faq
+      WHERE id = ?
+      ORDER BY created_at ASC
+    `,[id]
+    );
+
+    return data[0] as any;
+  } catch (err) {
+    console.error("Database Error:", err);
+    throw new Error("Failed to fetch faq.");
+  }
+}
+
 // Filtered Faq
 export async function fetchFilteredFaq(query: string, page: number) {
   noStore();

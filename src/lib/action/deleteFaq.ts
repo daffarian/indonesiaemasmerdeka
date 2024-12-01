@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 
 export async function deleteFaq(id:number) {
   try {
-    await db.query(`DELETE FROM article WHERE id = ?`, [id]);
+    await db.query(`DELETE FROM faq WHERE id = ?`, [id]);
 
   } catch (err) {
     console.error("Error deleting faq:", err);
