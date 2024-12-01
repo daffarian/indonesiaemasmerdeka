@@ -10,6 +10,6 @@ export async function deletePrivacyPolicy(id:number) {
   } catch (err) {
     console.error("Error deleting privacy policy:", err);
   }
-  revalidatePath("/dashboard/kebijakan-privacy");
+  revalidatePath("/dashboard/kebijakan-privasi");
   redirect("/dashboard/kebijakan-privasi");
 }

@@ -7,7 +7,7 @@ export default async function Page({ params }: { params: { id: number } }) {
   const [privacyPolicyById] = await fetchPrivacyPolicyById(params.id);
   return (
     <>
-      <AdminHeading text="Edit Kebijan Privasi" />
+      <AdminHeading text="Edit Kebijakan Privasi" />
       <AdminBody>
         <EditPrivacyPolicyForm privacyPolicy={privacyPolicyById} />
       </AdminBody>

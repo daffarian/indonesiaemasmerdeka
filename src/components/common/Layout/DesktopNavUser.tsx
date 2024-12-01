@@ -126,7 +126,7 @@ export default function DesktopNavUser({
                     </h2>
                   </div>
                 </Link>
-                <Link href="/">
+                <Link href="/syarat-pengguna">
                   <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       Syarat Pengguna

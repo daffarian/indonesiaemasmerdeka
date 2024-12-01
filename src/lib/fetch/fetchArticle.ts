@@ -68,3 +68,23 @@ export async function fetchFilteredArticles(query: string, page: number) {
     throw new Error("Failed to fetch article.");
   }
 }
+
+// fetch article count
+export async function fetchArticleCount() {
+  noStore();
+  try {
+    const data = await db.query(
+      `
+		SELECT
+    COUNT(*)
+    AS count
+    FROM article;
+      `
+    );
+
+    return data[0] as any;
+  } catch (err) {
+    console.error("Database Error:", err);
+    throw new Error("Failed to fetch article count.");
+  }
+}

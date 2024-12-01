@@ -17,6 +17,7 @@ import NewspaperIcon from "@/components/icons/NewsPaperIcon";
 import LayoutDashboardIcon from "@/components/icons/LayoutDashboardIcon";
 import CircleHelpIcon from "@/components/icons/CircleHelpIcon";
 import GlobeLockIcon from "@/components/icons/GlobeLockIcon";
+import { UserCheck2Icon } from "lucide-react";
 
 export default function MobileNavAdmin({ className }: { className?: string }) {
   const [isOpenNav, setIsOpenNav] = useState(false);
@@ -74,7 +75,7 @@ export default function MobileNavAdmin({ className }: { className?: string }) {
                 setIsOpenNav(false);
               }}
             >
-              <NewspaperIcon className="text-primary" />
+              <NewspaperIcon className="text-primary w-6" />
               Cerita Berbagi
             </Link>
             {/* History Stop */}
@@ -102,6 +103,18 @@ export default function MobileNavAdmin({ className }: { className?: string }) {
               Kebijakan Privasi  
             </Link>
             {/* Privacy Policy   Stop */}
+            {/* User Terms Start */}
+            <Link
+              href={"/dashboard/syarat-pengguna"}
+              className="hover:text-primary flex flex-row gap-3 hover:bg-zinc-100 px-3 py-3 rounded-lg text-zinc-600 text-base font-medium mt-3"
+              onClick={() => {
+                setIsOpenNav(false);
+              }}
+            >
+              <UserCheck2Icon className="text-primary" />
+              Syarat Pengguna  
+            </Link>
+            {/* User Terms Stop */}
           </div>
         </div>
         <div className="container absolute bottom-[1rem]">

@@ -40,16 +40,16 @@ export default function FooterUser({ className }: { className?: string }) {
               <h4 className="font-bold text-primary text-base">Pilar</h4>
               <ul className="flex flex-col gap-2 mt-3">
                 <li>
-                  <Link href={"/"}>Kesehatan</Link>
+                  <Link href={"/pilar/kesehatan"}>Kesehatan</Link>
                 </li>
                 <li>
-                  <Link href={"/"}>Pendidikan</Link>
+                  <Link href={"/pilar/pendidikan"}>Pendidikan</Link>
                 </li>
                 <li>
-                  <Link href={"/"}>UMKM</Link>
+                  <Link href={"/pilar/umkm"}>UMKM</Link>
                 </li>
                 <li>
-                  <Link href={"/"}>Lingkungan</Link>
+                  <Link href={"/pilar/lingkungan"}>Lingkungan</Link>
                 </li>
               </ul>
             </div>
@@ -58,7 +58,7 @@ export default function FooterUser({ className }: { className?: string }) {
               <h4 className="font-bold text-primary text-base">Program</h4>
               <ul className="flex flex-col gap-2 mt-3">
                 <li>
-                  <Link href={"/"}>Donasi</Link>
+                  <Link href={"/hubungi-kami"}>Donasi</Link>
                 </li>
               </ul>
             </div>
@@ -66,13 +66,13 @@ export default function FooterUser({ className }: { className?: string }) {
               <h4 className="font-bold text-primary text-base">Bantuan</h4>
               <ul className="flex flex-col gap-2 mt-3">
                 <li>
-                  <Link href={"/"}>FAQ</Link>
+                  <Link href={"/faq"}>FAQ</Link>
                 </li>
                 <li>
-                  <Link href={"/"}>Kebijakan Privasi</Link>
+                  <Link href={"/kebijakan-privasi"}>Kebijakan Privasi</Link>
                 </li>
                 <li>
-                  <Link href={"/"}>Syarat Pengguna</Link>
+                  <Link href={"/syarat-pengguna"}>Syarat Pengguna</Link>
                 </li>
               </ul>
             </div>

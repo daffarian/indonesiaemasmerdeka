@@ -1,6 +1,7 @@
-import { PrivasiPolicy } from './PrivasiPolicy.d';
+import { PrivasiPolicy } from "./PrivasiPolicy.d";
 import { Article } from "./Article";
 import { Faq } from "./Faq";
+import { UserTerms } from "./UserTerms";
 
 export interface TableProps<T> {
   columns: Column[];
@@ -8,17 +9,22 @@ export interface TableProps<T> {
   className?: string;
 }
 
-export interface ShareStoriesTableProps{
+export interface ShareStoriesTableProps {
   data: Article[];
   className?: string;
 }
 
-export interface FaqTableProps{
+export interface FaqTableProps {
   data: Faq[];
   className?: string;
 }
 
-export interface PrivasiPolicyTableProps{
+export interface PrivasiPolicyTableProps {
   data: PrivasiPolicy[];
+  className?: string;
+}
+
+export interface UserTermsTableProps {
+  data: UserTerms[];
   className?: string;
 }

@@ -160,7 +160,7 @@ export default function MobileNavUser({
                     </div>
                   </Link>
                   <Link
-                    href="/"
+                    href="/syarat-pengguna"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);
