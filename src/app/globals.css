@@ -47,9 +47,9 @@ label {
   @apply text-base lg:text-xl;
 }
 
-p {
+/* p, ul, ol {
   @apply lg:text-lg text-zinc-600;
-}
+} */
 /* p,
 span,
 div ol,

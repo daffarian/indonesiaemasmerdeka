@@ -8,7 +8,7 @@ export default async function Page({ params }: { params: { id: number } }) {
   const [faqById] = await fetchFaqById(params.id);
   return (
     <>
-      <AdminHeading text="Edit Artikel" />
+      <AdminHeading text="Edit FAQ" />
       <AdminBody>
         <EditFaqForm faq={faqById} />
       </AdminBody>

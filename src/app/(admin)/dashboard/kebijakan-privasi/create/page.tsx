@@ -1,13 +1,13 @@
 import AdminHeading from "@/components/admin/AdminHeading";
 import AdminBody from "@/components/admin/AdminBody";
-import CreateFaqForm from "@/components/admin/faq/CreateFaqForm";
+import CreatePrivacyPolicyForm from "@/components/admin/privacyPolicy/CreatePrivacyPolicyForm";
 
 export default function Page() {
   return (
     <>
-    <AdminHeading text="Tambah FAQ"/>
+    <AdminHeading text="Tambah Kebijakan Privasi"/>
     <AdminBody>
-      <CreateFaqForm/>
+      <CreatePrivacyPolicyForm/>
     </AdminBody>
     </>
   );

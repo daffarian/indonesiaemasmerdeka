@@ -1,3 +1,4 @@
+import { PrivasiPolicy } from './PrivasiPolicy.d';
 import { Article } from "./Article";
 import { Faq } from "./Faq";
 
@@ -14,5 +15,10 @@ export interface ShareStoriesTableProps{
 
 export interface FaqTableProps{
   data: Faq[];
+  className?: string;
+}
+
+export interface PrivasiPolicyTableProps{
+  data: PrivasiPolicy[];
   className?: string;
 }

@@ -19,7 +19,7 @@ export function createSlug(text: any) {
 
 // split sentence
 export function setMaxWords(sentence: string, maxWords: number) {
-  const words = sentence.split(" "); // Memisahkan kata
+  const words = sentence?.split(" "); // Memisahkan kata
   return words.length > maxWords
     ? words.slice(0, maxWords).join(" ") + "..." // Menggabungkan kembali kata dan menambahkan '...'
     : sentence; // Mengembalikan teks asli jika kurang dari 100 kata

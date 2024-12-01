@@ -86,7 +86,7 @@ export default function MobileNavUser({
                     </div>
                   </Link>
                   <Link
-                    href="/"
+                    href="/pilar/umkm"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);
@@ -97,7 +97,7 @@ export default function MobileNavUser({
                     </div>
                   </Link>
                   <Link
-                    href="/pilar/umkm"
+                    href="/pilar/lingkungan"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);
@@ -149,7 +149,7 @@ export default function MobileNavUser({
                     </div>
                   </Link>
                   <Link
-                    href="/"
+                    href="/kebijakan-privasi"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);
