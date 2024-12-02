@@ -66,3 +66,22 @@ export async function fetchFilteredUserTerms(query: string, page: number) {
     throw new Error("Failed to fetch filtered user terms.");
   }
 }
+
+// fetch user terms count
+export async function fetchUserTermsCount() {
+  noStore();
+  try {
+    const data = await db.query(
+    `SELECT
+    COUNT(*)
+    AS count
+    FROM user_terms;
+      `
+    );
+
+    return data[0] as any;
+  } catch (err) {
+    console.error("Database Error:", err);
+    throw new Error("Failed to fetch user terms count.");
+  }
+}

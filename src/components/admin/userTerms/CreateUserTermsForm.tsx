@@ -75,7 +75,7 @@ export default function CreateUserTermsForm({ className }: { className?: string 
       {/* Button Start */}
       <div className="flex flex-row gap-5 justify-end">
         <Link
-          href={"/dashboard/kebijakan-privasi"}
+          href={"/dashboard/syarat-pengguna"}
           className="bg-red-500 px-3 py-2 rounded-lg font-medium hover:bg-red-600 text-white"
         >
           Batal

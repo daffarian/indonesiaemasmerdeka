@@ -32,7 +32,8 @@ export async function fetchPrivacyPolicyById(id: number) {
       FROM privacy_policy
       WHERE id = ?
       ORDER BY created_at ASC
-    `,[id]
+    `,
+      [id]
     );
 
     return data[0] as any;
@@ -64,5 +65,24 @@ export async function fetchFilteredPrivacyPolicy(query: string, page: number) {
   } catch (err) {
     console.error("Database Error:", err);
     throw new Error("Failed to fetch filtered privacy policy.");
+  }
+}
+
+// fetch faq count
+export async function fetchPrivacyPolicyCount() {
+  noStore();
+  try {
+    const data = await db.query(
+    `SELECT
+    COUNT(*)
+    AS count
+    FROM privaci_policy
+    `
+    );
+
+    return data[0] as any;
+  } catch (err) {
+    console.error("Database Error:", err);
+    throw new Error("Failed to fetch privacy policy count.");
   }
 }

@@ -66,3 +66,23 @@ export async function fetchFilteredFaq(query: string, page: number) {
     throw new Error("Failed to fetch filtered faq.");
   }
 }
+
+// fetch faq count
+export async function fetchFaqCount() {
+  noStore();
+  try {
+    const data = await db.query(
+      `
+		SELECT
+    COUNT(*)
+    AS count
+    FROM faq;
+      `
+    );
+
+    return data[0] as any;
+  } catch (err) {
+    console.error("Database Error:", err);
+    throw new Error("Failed to fetch faq count.");
+  }
+}

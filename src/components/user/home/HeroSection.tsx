@@ -143,12 +143,12 @@ export default function HeroSection({ className }: { className?: string }) {
                 Siap memberikan dampak kebaikan ?
               </p>
               <div className="flex flex-row w-full gap-5 mt-5 text-sm lg:w-96">
-                <Link
+                {/* <Link
                   className="bg-primary text-center rounded-lg text-white w-full px-5 py-3"
                   href={"/"}
                 >
                   Selengkapnya
-                </Link>
+                </Link> */}
                 <Link
                   className="bg-amber-100 text-center text-amber-500 w-full px-5 py-3 rounded-lg"
                   href={"/hubungi-kami"}

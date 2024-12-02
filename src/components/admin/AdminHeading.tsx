@@ -9,7 +9,7 @@ export default function AdminHeading({
 }) {
   return (
     <div className="shadow-lg p-5 rounded-lg bg-white flex flex-row items-center justify-between">
-      <h1 className="text-lg lg:text-3xl text-primary">{text}</h1>
+      <h1 className="text-2xl lg:text-3xl text-primary">{text}</h1>
       {children}
     </div>
   );

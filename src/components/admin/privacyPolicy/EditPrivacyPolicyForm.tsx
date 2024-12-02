@@ -94,7 +94,7 @@ export default function EditPrivacyPolicyForm({
       {/* Button Start */}
       <div className="flex flex-row gap-5 justify-end">
         <Link
-          href={"/dashboard/faq"}
+          href={"/dashboard/kebijakan-privasi"}
           className="bg-red-500 px-3 py-2 rounded-lg font-medium hover:bg-red-600 text-white"
         >
           Batal
