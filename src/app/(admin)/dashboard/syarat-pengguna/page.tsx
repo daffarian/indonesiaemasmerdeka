@@ -3,7 +3,7 @@ import ButtonCreate from "@/components/common/ButtonCreate";
 import AdminHeading from "@/components/admin/AdminHeading";
 import AdminBody from "@/components/admin/AdminBody";
 
-import { fetchFilteredUserTerms } from "@/lib/fetch/fetchUserTerms";
+import { fetchFilteredUserTerms } from "@/lib/data/fetchUserTerms";
 
 import TableUserTerms from "@/components/admin/userTerms/TableUserTerms";
 

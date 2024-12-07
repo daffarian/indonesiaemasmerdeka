@@ -1,6 +1,6 @@
 import HeaderAdmin from "@/components/common/Layout/HeaderAdmin";
 import DesktopNavAdmin from "@/components/common/Layout/DesktopNavAdmin";
-import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
+import { fetchArticleVisible } from "@/lib/data/fetchVisible";
 
 export default async function Layout({
   children,
@@ -8,6 +8,7 @@ export default async function Layout({
   children: React.ReactNode;
 }) {
   const [isArticleVisible] = await fetchArticleVisible();
+  
   return (
     <>
       <HeaderAdmin isArticleVisible={isArticleVisible.value} />

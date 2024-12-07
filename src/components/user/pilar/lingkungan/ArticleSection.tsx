@@ -1,6 +1,6 @@
 import CardArticle from "@/components/common/CardArticle";
 import { Article } from "@/types/Article";
-import { fetchArticleByCategory } from "@/lib/fetch/fetchArticle";
+import { fetchArticleByCategory } from "@/lib/data/fetchArticle";
 export default async function ArticleSection() {
   const article: Article[] = await fetchArticleByCategory("Lingkungan");
   return (

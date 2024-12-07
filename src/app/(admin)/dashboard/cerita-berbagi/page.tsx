@@ -1,4 +1,4 @@
-import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
+import { fetchArticleVisible } from "@/lib/data/fetchVisible";
 import { setArticleVisible } from "@/lib/action/setArticleVisible";
 
 import Search from "@/components/common/Search";
@@ -7,7 +7,7 @@ import ButtonCreate from "@/components/common/ButtonCreate";
 import AdminHeading from "@/components/admin/AdminHeading";
 import AdminBody from "@/components/admin/AdminBody";
 
-import { fetchFilteredArticles } from "@/lib/fetch/fetchArticle";
+import { fetchFilteredArticles } from "@/lib/data/fetchArticle";
 
 import ToggleVisibility from "@/components/common/ToggleVisibility";
 

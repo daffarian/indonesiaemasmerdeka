@@ -1,7 +1,7 @@
 import HeaderUser from "@/components/common/Layout/HeaderUser";
 import FooterUser from "@/components/common/Layout/FooterUser";
 
-import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
+import { fetchArticleVisible } from "@/lib/data/fetchVisible";
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const [isArticleVisible] = await fetchArticleVisible();
   return (

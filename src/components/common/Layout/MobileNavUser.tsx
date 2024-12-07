@@ -117,7 +117,7 @@ export default function MobileNavUser({
                 </AccordionTrigger>
                 <AccordionContent>
                   <Link
-                    href="/pilar/lingkungan"
+                    href="/hubungi-kami"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);

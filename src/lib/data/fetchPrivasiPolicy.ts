@@ -68,21 +68,22 @@ export async function fetchFilteredPrivacyPolicy(query: string, page: number) {
   }
 }
 
-// fetch faq count
+// fetch privacy policy count
 export async function fetchPrivacyPolicyCount() {
   noStore();
   try {
     const data = await db.query(
-    `SELECT
+      `
+		SELECT
     COUNT(*)
     AS count
-    FROM privaci_policy
-    `
+    FROM privacy_policy;
+      `
     );
 
     return data[0] as any;
   } catch (err) {
     console.error("Database Error:", err);
-    throw new Error("Failed to fetch privacy policy count.");
+    throw new Error("Failed to fetch faq count.");
   }
 }

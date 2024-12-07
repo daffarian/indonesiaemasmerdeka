@@ -1,4 +1,4 @@
-import { fetchArticle } from "@/lib/fetch/fetchArticle";
+import { fetchArticle } from "@/lib/data/fetchArticle";
 import { Article } from "@/types/Article";
 import Link from "next/link";
 import CardArticle from "@/components/common/CardArticle";

@@ -5,7 +5,7 @@ import ServicesSection from "@/components/user/home/ServicesSection";
 import Csr from "@/components/common/Csr";
 import ArticleSection from "@/components/user/home/ArticleSection";
 
-import { fetchArticleVisible } from "@/lib/fetch/fetchVisible";
+import { fetchArticleVisible } from "@/lib/data/fetchVisible";
 
 export default async function Home() {
   const [isArticleVisible] = await fetchArticleVisible();

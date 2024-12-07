@@ -4,7 +4,7 @@ import ButtonCreate from "@/components/common/ButtonCreate";
 import AdminHeading from "@/components/admin/AdminHeading";
 import AdminBody from "@/components/admin/AdminBody";
 
-import { fetchFilteredFaq } from "@/lib/fetch/fetchFaq";
+import { fetchFilteredFaq } from "@/lib/data/fetchFaq";
 
 
 export default async function Page({

@@ -5,16 +5,25 @@ import CircleHelpIcon from "@/components/icons/CircleHelpIcon";
 import GlobeLockIcon from "@/components/icons/GlobeLockIcon";
 import UserCheckIcon from "@/components/icons/UserCheck";
 
-import { fetchArticleCount } from "@/lib/fetch/fetchArticle";
-
-import { fetchDashboardCardData } from "@/lib/fetch/fetchDashboardData";
-
 import Link from "next/link";
 
+
+import { fetchArticleCount } from "@/lib/data/fetchArticle";
+import { fetchPrivacyPolicyCount } from "@/lib/data/fetchPrivasiPolicy";
+import { fetchUserTermsCount } from "@/lib/data/fetchUserTerms";
+import { fetchFaqCount } from "@/lib/data/fetchFaq";
+
 export default async function Page() {
-  // const [articleCount] = await fetchArticleCount();
-  const { article, faq, privacyPolicy, userTerms } =
-    await fetchDashboardCardData();
+  const articleCount = await fetchArticleCount();
+  const faqCount = await fetchFaqCount();
+  const privacyPolicyCount = await fetchPrivacyPolicyCount();
+  const userTermsCount = await fetchUserTermsCount();
+
+  const article = articleCount[0].count;
+  const faq = faqCount[0].count;
+  const privacyPolicy = privacyPolicyCount[0].count;
+  const userTerms = userTermsCount[0].count;
+
   return (
     <>
       {/* Heading & Toggle Start */}
@@ -89,3 +98,4 @@ export default async function Page() {
     </>
   );
 }
+

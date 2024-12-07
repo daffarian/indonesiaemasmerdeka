@@ -5,7 +5,7 @@ import AdminBody from "@/components/admin/AdminBody";
 import TablePrivacyPolicy from "@/components/admin/privacyPolicy/TablePrivacyPolicy";
 
 // fetch filtered privacy policy
-import { fetchFilteredPrivacyPolicy } from "@/lib/fetch/fetchPrivasiPolicy";
+import { fetchFilteredPrivacyPolicy } from "@/lib/data/fetchPrivasiPolicy";
 
 
 export default async function Page({
