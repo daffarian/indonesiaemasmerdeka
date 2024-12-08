@@ -81,6 +81,7 @@ export default function Csr({ className }: { className?: string }) {
                     setMessage({ ...message, email: e.target.value });
                   }}
                   className="rounded-lg py-4 px-3 focus:outline-none placeholder:text-sm"
+                  required
                 />
               </div>
               {/* Email Stop */}
@@ -102,6 +103,7 @@ export default function Csr({ className }: { className?: string }) {
                     setMessage({ ...message, phone: e.target.value });
                   }}
                   className="rounded-lg py-4 px-3 focus:outline-none placeholder:text-sm"
+                  required
                 />
               </div>
               {/* Phone Stop */}
@@ -123,6 +125,7 @@ export default function Csr({ className }: { className?: string }) {
                   }}
                   className="rounded-lg py-4 px-3 focus:outline-none placeholder:text-sm"
                   rows={5}
+                  required
                 />
               </div>
               {/* Message Stop */}

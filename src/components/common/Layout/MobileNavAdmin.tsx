@@ -10,14 +10,16 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import { logout } from "@/lib/action/logout";
+
 import Link from "next/link";
 
-import GiftIcon from "../../icons/GiftIcon";
 import NewspaperIcon from "@/components/icons/NewsPaperIcon";
 import LayoutDashboardIcon from "@/components/icons/LayoutDashboardIcon";
 import CircleHelpIcon from "@/components/icons/CircleHelpIcon";
 import GlobeLockIcon from "@/components/icons/GlobeLockIcon";
 import { UserCheck2Icon } from "lucide-react";
+import ButtonLogout from "@/components/ButtonLogout";
 
 export default function MobileNavAdmin({ className }: { className?: string }) {
   const [isOpenNav, setIsOpenNav] = useState(false);
@@ -100,7 +102,7 @@ export default function MobileNavAdmin({ className }: { className?: string }) {
               }}
             >
               <GlobeLockIcon className="text-primary" />
-              Kebijakan Privasi  
+              Kebijakan Privasi
             </Link>
             {/* Privacy Policy   Stop */}
             {/* User Terms Start */}
@@ -112,21 +114,23 @@ export default function MobileNavAdmin({ className }: { className?: string }) {
               }}
             >
               <UserCheck2Icon className="text-primary" />
-              Syarat Pengguna  
+              Syarat Pengguna
             </Link>
             {/* User Terms Stop */}
           </div>
         </div>
         <div className="container absolute bottom-[1rem]">
-          <Link
-            href="/dashboard"
-            className="block text-base w-full text-wrap bg-red-500 p-2 rounded-lg text-white text-center font-medium"
-            onClick={() => {
-              setIsOpenNav(false);
-            }}
+          <form
+            action={logout}
           >
-            Logout
-          </Link>
+            <ButtonLogout
+              onClick={() => {
+                setIsOpenNav(false);
+              }}
+            >
+              Logout
+            </ButtonLogout>
+          </form>
         </div>
       </div>
     </nav>

@@ -62,6 +62,7 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   const privacyPolicy = await fetchPrivacyPolicy();
+
   return (
     <section className="py-16 lg:py-20">
       {/* Heading Start */}
