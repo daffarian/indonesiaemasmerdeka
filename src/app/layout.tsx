@@ -74,8 +74,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const clientIp = await getIpFromClient();
-  await addIp(clientIp);
 
   return (
     <html lang="en">
