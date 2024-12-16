@@ -1,15 +1,13 @@
 "use server";
-import { redirect } from 'next/navigation';
-import { signIn } from '@/auth';
+import { redirect } from "next/navigation";
+import { signIn } from "@/auth";
 import { AuthError } from "next-auth";
 import { revalidatePath } from "next/cache";
+import { isRedirectError } from "next/dist/client/components/redirect";
 
-export async function login(prevState: string | undefined,
-  formData: FormData,) {
+export async function login(prevState: string | undefined, formData: FormData) {
   try {
     await signIn("credentials", formData);
-    revalidatePath("/dashboard/cerita-berbagi");
-    redirect("/dashboard/cerita-berbagi");
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
@@ -19,6 +17,10 @@ export async function login(prevState: string | undefined,
           return "Something went wrong.";
       }
     }
-    throw error;
+    if (isRedirectError(error)) {
+      revalidatePath("/dashboard");
+      redirect("/dashboard");
+      throw error;
+    }
   }
 }

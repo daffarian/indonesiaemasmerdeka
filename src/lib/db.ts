@@ -1,11 +1,11 @@
 // Get the client
-import mysql from 'mysql2/promise';
+import mysql from "mysql2/promise";
 
 // Create the connection to database
 export const db = await mysql.createPool({
-  host: 'yayasanindonesiaemas.com',
-  port: 3306,
-  user: 'yayasa84_yiem',
-  password: 'yiemdb2024',
-  database: 'yayasa84_yiem',
+  host: process.env.DB_HOST,
+  port: parseInt(`${process.env.DB_PORT}`),
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_USER,
 });

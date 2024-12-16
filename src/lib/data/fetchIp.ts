@@ -25,10 +25,10 @@ export async function fetchAllIp() {
   try {
     const data = await db.query(`SELECT COUNT(*) AS count
     FROM ip
-    WHERE YEARWEEK(created_at, 1) = YEARWEEK(CURDATE(), 1);`);
+    `);
     return data[0] as any;
   } catch (err) {
-    console.error("Error get ip today :", err);
+    console.error("Error get all ip count :", err);
   }
 }
 

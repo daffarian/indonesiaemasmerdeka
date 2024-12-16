@@ -5,6 +5,8 @@ import MobileNavAdmin from "./MobileNavAdmin";
 import { useState, useEffect } from "react";
 
 import Link from "next/link";
+import { logout } from "@/lib/action/logout";
+import ButtonLogout from "@/components/ButtonLogout";
 export default function HeaderAdmin({
   className,
   isArticleVisible,
@@ -37,7 +39,10 @@ export default function HeaderAdmin({
         <Link href={"/"}>
           <Author className="w-12 lg:w-16 !z-[60]" />
         </Link>
-        <MobileNavAdmin/>
+        <MobileNavAdmin />
+        <form className="hidden lg:flex" action={logout}>
+          <ButtonLogout className="">Logout</ButtonLogout>
+        </form>
       </div>
     </header>
   );
