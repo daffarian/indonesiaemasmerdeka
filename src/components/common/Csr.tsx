@@ -32,27 +32,27 @@ export default function Csr({ className }: { className?: string }) {
             <p className="text-zinc-800 font-bold my-5">Hubungi Kami</p>
             <div className="flex flex-col gap-5">
               {/* Whatsapp Start */}
-              {/* <a href="https://api.whatsapp.com/send?phone=6285891877388&text=Hallo%20Yayasan%20Indonesia%20Emas%20saya%20mau%20tanya," target="_blank">
+              <a href="https://api.whatsapp.com/send?phone=62 85899777770&text=Hallo%20Yayasan%20Indonesia%20Emas%20saya%20mau%20tanya," target="_blank">
                 <div className="flex flex-row gap-3 items-center text-zinc-800 py-5 px-3 border-zinc-800 border rounded-lg">
                   <div className="inline-flex justify-center items-center p-3 rounded-full bg-green-500">
                     <WaIcon className="w-8 h-8" />
                   </div>
                   <div>
                     <h4 className="font-bold">Whatsapp</h4>
-                    <p className="text-sm">+62-858-9187-7388</p>
+                    <p className="text-sm">+62-858-9977-7770</p>
                   </div>
                 </div>
-              </a> */}
+              </a>
               {/* Whatsapp Stop */}
               {/* Email Start */}
-              <a href={"mailto:ira@yayasanindonesiaemas.com"}>
+              <a href={"mailto:partnership@yayasanindonesiaemas.com"}>
                 <div className="flex flex-row gap-3 items-center text-zinc-800 py-5 px-3 border-zinc-800 border rounded-lg">
                   <div className="inline-flex justify-center items-center p-3 rounded-full bg-red-500">
                     <EmailIcon className="w-8 h-8" />
                   </div>
                   <div>
                     <h4 className="font-bold">Email</h4>
-                    <p className="text-sm">ira@yayasanindonesiaemas.com</p>
+                    <p className="text-sm">partnership@yayasanindonesiaemas.com</p>
                   </div>
                 </div>
               </a>

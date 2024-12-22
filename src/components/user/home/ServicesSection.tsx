@@ -67,8 +67,8 @@ export default function ServicesSection({ className }: { className?: string }) {
             </SwiperSlide>
             {/* Donatioan Stop */}
 
-            {/* Edication Start */}
-            <SwiperSlide>
+            {/* Education Start */}
+            {/* <SwiperSlide>
               <div className="bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-cover bg-bottom-top relative">
                 <div className="z-[1]">
                   <div className="flex gap-2 items-center mb-5">
@@ -85,8 +85,8 @@ export default function ServicesSection({ className }: { className?: string }) {
                 </div>
                 <div className="bg-gradient-to-r from-white to-white/30 via-white w-full h-full absolute inset-0 rounded-3xl"></div>
               </div>
-              {/* Edication Stop */}
-            </SwiperSlide>
+            </SwiperSlide> */}
+            {/* Education Stop */}
             {/* UMKM Start */}
             <SwiperSlide>
               <div className="bg-[url('https://izinin.id/public/img/blog/ilustrasi-umkm.jpg')] flex flex-col justify-center p-5 rounded-3xl w-full h-80 bg-current relative">

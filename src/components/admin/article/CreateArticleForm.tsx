@@ -127,12 +127,12 @@ export default function CreateArticleForm({ className }: { className?: string })
               >
                 Kesehatan
               </option>
-              <option
+              {/* <option
                 value={"Pendidikan"}
                 className="rounded-lg hover:bg-primary"
               >
                 Pendidikan
-              </option>
+              </option> */}
               <option value={"UMKM"} className="rounded-lg hover:bg-primary">
                 UMKM
               </option>

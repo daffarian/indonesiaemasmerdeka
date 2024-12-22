@@ -74,7 +74,7 @@ export default function MobileNavUser({
                       Kesehatan
                     </div>
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/pilar/pendidikan"
                     className=""
                     onClick={() => {
@@ -84,7 +84,7 @@ export default function MobileNavUser({
                     <div className="px-3 py-2 rounded-lg text-zinc-600 text-base hover:text-primary">
                       Pendidikan
                     </div>
-                  </Link>
+                  </Link> */}
                   <Link
                     href="/pilar/umkm"
                     className=""

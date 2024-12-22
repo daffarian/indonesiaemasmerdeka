@@ -21,19 +21,19 @@ export default function FooterUser({ className }: { className?: string }) {
             </p>
             <div className="flex flex-row gap-2 mb-2 items-center">
               <EmailIcon className="w-4 h-4" />
-              <a href="mailto:ira@yayasanindonesiaemas.com">
-                ira@yayasanindonesiaemas.com
+              <a href="mailto:partnership@yayasanindonesiaemas.com">
+                partnership@yayasanindonesiaemas.com
               </a>
             </div>
-            {/* <div className="flex flex-row gap-2 items-center">
+            <div className="flex flex-row gap-2 items-center">
               <WaIcon className="w-4 h-4" />
               <a
-                href="https://api.whatsapp.com/send?phone=6285891877388&text=Hallo%20Yayasan%20Indonesia%20Emas,"
+                href="https://api.whatsapp.com/send?phone=+6285899777770&text=Hallo%20Yayasan%20Indonesia%20Emas,"
                 target="_blank"
               >
-                +62-858-9187-7388
+                +62-858-9977-7770
               </a>
-            </div> */}
+            </div>
           </address>
           <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
             <div>

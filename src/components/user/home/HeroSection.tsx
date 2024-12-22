@@ -61,13 +61,13 @@ export default function HeroSection({ className }: { className?: string }) {
                   alt="logo"
                 />
               </SwiperSlide>
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <img
                   className="w-60 lg:w-full h-auto mx-auto"
                   src="/images/pilar/pendidikan.jpg"
                   alt="logo"
                 />
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <img
                   className="mx-auto w-full lg:w-full h-auto"
@@ -120,11 +120,11 @@ export default function HeroSection({ className }: { className?: string }) {
                   Kesehatan
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <div className="text-primary text-2xl lg:text-3xl !font-extrabold">
                   Pendidikan
                 </div>
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <div className="text-primary text-2xl lg:text-3xl !font-extrabold">
                   UMKM
@@ -200,7 +200,7 @@ export default function HeroSection({ className }: { className?: string }) {
                 </SwiperSlide>
                 {/* Kesehatan Stop*/}
                 {/* Pendidikan Start */}
-                <SwiperSlide>
+                {/* <SwiperSlide>
                   <div className="flex flex-row gap-3 flex-wrap">
                     <img
                       className="w-10 lg:w-16 rounded-lg"
@@ -238,7 +238,7 @@ export default function HeroSection({ className }: { className?: string }) {
                       alt="sdgs-16"
                     />
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 {/* Pendidikan Stop */}
                 {/* UMKM Start */}
                 <SwiperSlide>

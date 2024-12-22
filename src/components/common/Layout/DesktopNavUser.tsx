@@ -39,7 +39,7 @@ export default function DesktopNavUser({
                     </p>
                   </div>
                 </Link>
-                <Link href={"/pilar/pendidikan"}>
+                {/* <Link href={"/pilar/pendidikan"}>
                   <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
                       Pendidikan
@@ -49,7 +49,7 @@ export default function DesktopNavUser({
                       Kemampuan Lulusan
                     </p>
                   </div>
-                </Link>
+                </Link> */}
                 <Link href={"/pilar/umkm"}>
                   <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
                     <h2 className="text-sm text-zinc-600 group-hover:text-primary">
