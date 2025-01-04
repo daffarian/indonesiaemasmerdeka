@@ -16,7 +16,7 @@ export default function Csr({ className }: { className?: string }) {
     e.preventDefault;
     const subject = `Pesan dari ${message.email} | ${message.phone}`;
     const body = encodeURIComponent(message.body);
-    const mailtoLink = `mailto:ira@yayasanindonesiaemas.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:partnership@yayasanindonesiaemas.com?subject=${subject}&body=${body}`;
 
     window.location.href = mailtoLink; // Buka aplikasi email
   };
@@ -32,7 +32,7 @@ export default function Csr({ className }: { className?: string }) {
             <p className="text-zinc-800 font-bold my-5">Hubungi Kami</p>
             <div className="flex flex-col gap-5">
               {/* Whatsapp Start */}
-              <a href="https://api.whatsapp.com/send?phone=62 85899777770&text=Hallo%20Yayasan%20Indonesia%20Emas%20saya%20mau%20tanya," target="_blank">
+              <a href="https://api.whatsapp.com/send?phone=6285899777770&text=Hallo%20Yayasan%20Indonesia%20Emas%20saya%20mau%20tanya," target="_blank">
                 <div className="flex flex-row gap-3 items-center text-zinc-800 py-5 px-3 border-zinc-800 border rounded-lg">
                   <div className="inline-flex justify-center items-center p-3 rounded-full bg-green-500">
                     <WaIcon className="w-8 h-8" />
