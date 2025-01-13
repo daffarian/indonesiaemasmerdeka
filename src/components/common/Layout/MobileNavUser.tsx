@@ -186,6 +186,17 @@ export default function MobileNavUser({
                 </Link>
               )}
               {/* History Stop */}
+              {/* Email Start */}
+              <Link
+                href={"https://webmail.yayasanindonesiaemas.com"}
+                className="hover:textprimary text-zinc-600 text-base font-medium mt-3 block"
+                onClick={() => {
+                  setIsOpenNav(false);
+                }}
+              >
+                Email Login
+              </Link>
+              {/* Email Stop */}
             </Accordion>
           </div>
         </div>

@@ -149,6 +149,16 @@ export default function DesktopNavUser({
             </NavigationMenuItem>
           )}
           {/* Pillar Stop */}
+          {/* Email Start */}
+          <NavigationMenuItem>
+            <Link
+              href={"https://webmail.yayasanindonesiaemas.com"}
+              className={`${navigationMenuTriggerStyle()} tracking-wide !text-base`}
+            >
+              Email Login
+            </Link>
+          </NavigationMenuItem>
+          {/* Email Stop */}
         </NavigationMenuList>
       </NavigationMenu>
     </nav>

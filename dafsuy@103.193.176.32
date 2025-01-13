@@ -1,0 +1,6 @@
+AUTH_SECRET="JYIu3UtEIHs2O9iKu8nXrDCyGysnfqeHY76nBI8L9P8=" # Added by `npx auth`. Read more: https://cli.authjs.dev
+DB_HOST="yayasanindonesiaemas.com"
+DB_PORT=3306 # atau 3306 untuk MySQL
+DB_USER="yayasa84_yiem"
+DB_PASSWORD="yiemdb2024"
+DB_NAME="yayasa84_yiem"
