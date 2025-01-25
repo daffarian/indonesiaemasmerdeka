@@ -33,7 +33,7 @@ export default function ChartJs({
         labels: data.map((value) => label[parseInt(value.month) - 1]),
         datasets: [
           {
-            label: "Pengunjung 2024",
+            label: "Pengunjung tahun ini",
             data: data.map((value) => value.count),
             // data: [10, 25, 32, 12, 80, 40, 13, 23, 64, 22, 90, 74],
           },

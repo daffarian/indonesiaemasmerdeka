@@ -97,7 +97,7 @@ export default function FooterUser({ className }: { className?: string }) {
 
         {/* Sosmed Stop */}
         <p className="text-sm text-center lg:text-start mt-8 text-white">
-          Copyright &copy; 2024 Yayasan Indonesia Emas
+          Copyright &copy; 2025 Yayasan Indonesia Emas
         </p>
       </div>
     </footer>
