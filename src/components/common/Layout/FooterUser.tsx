@@ -15,10 +15,10 @@ export default function FooterUser({ className }: { className?: string }) {
         <div className="flex flex-col lg:flex-row justify-between">
           <address className="not-italic mb-10 max-w-80">
             <Author className="w-14 mb-7" />
-            <p className="mb-7 text-base text-white">
+            {/* <p className="mb-7 text-base text-white">
               Komp Taman Mangu Indah I 2/16, Jurang Mangu Barat, Pondok Aren,
               Tangerang Selatan 15223
-            </p>
+            </p> */}
             <div className="flex flex-row gap-2 mb-2 items-center">
               <EmailIcon className="w-4 h-4" />
               <a href="mailto:partnership@yayasanindonesiaemas.com">
