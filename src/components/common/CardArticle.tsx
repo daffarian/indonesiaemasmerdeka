@@ -46,7 +46,7 @@ export default function CardArticle(article: CardArticleTypes) {
       {/* Link Start */}
       <div>
         <Link
-          href={`/cerita-berbagi/${article.slug}`}
+          href={`/impact-stories/${article.slug}`}
           className="text-primary font-medium my-5 inline-block"
         >
           Baca Selengkapnya
