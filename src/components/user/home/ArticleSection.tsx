@@ -14,7 +14,7 @@ export default async function ArticleSection({
       {article.length > 0 && (
         <section className={`${className} py-10 lg:py-20`}>
           <div className="container">
-            <h2 className="text-primary mb-10">Cerita Berbagi</h2>
+            <h2 className="text-primary mb-10">Impact Stories</h2>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               {article.map((value: any, index: number) => (
                 <CardArticle

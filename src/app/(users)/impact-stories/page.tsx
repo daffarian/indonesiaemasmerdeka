@@ -104,7 +104,7 @@ export default async function Page() {
               {/* Link Start */}
               <div>
                 <Link
-                  href={`/cerita-berbagi/${value.slug}`}
+                  href={`/impact-stories/${value.slug}`}
                   className="text-primary font-medium my-5 inline-block"
                 >
                   Baca Selengkapnya
