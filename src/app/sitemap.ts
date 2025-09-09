@@ -5,7 +5,7 @@ import { fetchArticle } from "@/lib/data/fetchArticle";
 async function getArticleSiteMap() {
   const pages = await fetchArticle();
   return pages.map((page: Article) => ({
-    url: `https://yayasanindonesiaemas.com/cerita-berbagi/${page.slug}`,
+    url: `https://yayasanindonesiaemas.com/impact-stories/${page.slug}`,
     lastModified: page.created_at,
     changeFrequency: "weekly",
     priority: 0.5,
@@ -13,68 +13,69 @@ async function getArticleSiteMap() {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const dynamycArticlePages = await getArticleSiteMap();
+  const article = await fetchArticle();
+  const dynamicArticlePages = await getArticleSiteMap();
   return [
     {
       url: "https://yayasanindonesiaemas.com",
-      lastModified: new Date(),
+      lastModified: article.created_at,
       changeFrequency: "monthly",
       priority: 1,
     },
     {
       url: "https://yayasanindonesiaemas.com/pilar/kesehatan",
-      lastModified: new Date(),
+      lastModified: article.created_at,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: "https://yayasanindonesiaemas.com/pilar/pendidikan",
-      lastModified: new Date(),
+      lastModified: article.created_at,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: "https://yayasanindonesiaemas.com/pilar/umkm",
-      lastModified: new Date(),
+      lastModified: article.created_at,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: "https://yayasanindonesiaemas.com/pilar/lingkungan",
-      lastModified: new Date(),
+      lastModified: article.created_at,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: "https://yayasanindonesiaemas.com/faq",
-      lastModified: new Date(),
+      lastModified: article.created_at,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: "https://yayasanindonesiaemas.com/kebijakan-privasi",
-      lastModified: new Date(),
+      lastModified: article.created_at,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: "https://yayasanindonesiaemas.com/syarat-pengguna",
-      lastModified: new Date(),
+      lastModified: article.created_at,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: "https://yayasanindonesiaemas.com/hubungi-kami",
-      lastModified: new Date(),
+      lastModified: article.created_at,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://yayasanindonesiaemas.com/cerita-berbagi",
-      lastModified: new Date(),
+      url: "https://yayasanindonesiaemas.com/impact-stories",
+      lastModified: article.created_at,
       changeFrequency: "weekly",
       priority: 0.5,
     },
-    ...dynamycArticlePages,
+    ...dynamicArticlePages,
   ];
 }
