@@ -58,7 +58,7 @@ export default function FooterUser({ className }: { className?: string }) {
               <h4 className="font-bold text-primary text-base">Program</h4>
               <ul className="flex flex-col gap-2 mt-3">
                 <li>
-                  <Link href={"/hubungi-kami"}>Donasi</Link>
+                  <Link href={"/impact-stories"}>Impact Stories</Link>
                 </li>
               </ul>
             </div>

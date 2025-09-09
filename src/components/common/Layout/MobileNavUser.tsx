@@ -117,15 +117,14 @@ export default function MobileNavUser({
                 </AccordionTrigger>
                 <AccordionContent>
                   <Link
-                    href="/hubungi-kami"
+                    href="/impact-stories"
                     className=""
                     onClick={() => {
                       setIsOpenNav(false);
                     }}
                   >
-                    <div className="px-3 py-2 rounded-lg hover:text-primary flex items-center">
-                      <GiftIcon className="mr-2 text-primary inline w-5 h-5" />
-                      <span className="text-zinc-600 text-base">Donasi</span>
+                    <div className="px-3 py-2 rounded-lg text-zinc-600 text-base hover:text-primary">
+                      Impact Stories
                     </div>
                   </Link>
                 </AccordionContent>
@@ -174,7 +173,7 @@ export default function MobileNavUser({
               </AccordionItem>
               {/* Help Stop */}
               {/* History Start */}
-              {isArticleVisible === 1 && (
+              {/* {isArticleVisible === 1 && (
                 <Link
                   href={"/cerita-berbagi"}
                   className="hover:textprimary text-zinc-600 text-base font-medium mt-3 block"
@@ -184,7 +183,7 @@ export default function MobileNavUser({
                 >
                   Cerita Berbagi
                 </Link>
-              )}
+              )} */}
               {/* History Stop */}
               {/* Email Start */}
               <Link

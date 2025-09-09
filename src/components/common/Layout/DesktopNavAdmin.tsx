@@ -40,7 +40,7 @@ export default function DesktopNavAdmin({
             className="hover:text-primary flex flex-row gap-3 hover:bg-zinc-100 px-3 py-3 rounded-lg text-zinc-600 text-base font-medium mt-3"
           >
             <NewspaperIcon className="text-primary w-6" />
-            Cerita Berbagi
+            Impact Stories
           </Link>
           {/* History Stop */}
           {/* Faq Start */}

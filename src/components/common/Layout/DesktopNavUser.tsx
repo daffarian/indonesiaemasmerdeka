@@ -82,7 +82,7 @@ export default function DesktopNavUser({
               Program
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <div className="!text-sm w-96 flex flex-col">
+              {/* <div className="!text-sm w-96 flex flex-col">
                 <div className=" rounded-lg transition-all flex flex-row">
                   <div className="flex flex-row gap-3 items-start w-40 p-5">
                     <GiftIcon className="w-5 text-primary" />
@@ -101,6 +101,15 @@ export default function DesktopNavUser({
                     <GiftIcon className="absolute bottom-3 right-3 text-primary w-12 h-12 opacity-30" />
                   </div>
                 </div>
+              </div> */}
+              <div className="!text-sm p-3 w-96 flex flex-col">
+                <Link href="/impact-stories">
+                  <div className="p-3 group hover:bg-zinc-100 rounded-lg transition-all">
+                    <h2 className="text-sm text-zinc-600 group-hover:text-primary">
+                      Impact Stories
+                    </h2>
+                  </div>
+                </Link>
               </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -138,16 +147,16 @@ export default function DesktopNavUser({
           </NavigationMenuItem>
           {/* Help Stop */}
           {/* Pillar Start */}
-          {isArticleVisible === 1 && (
+          {/* {isArticleVisible === 1 && (
             <NavigationMenuItem>
               <Link
-                href={"/cerita-berbagi"}
+                href={"/impact-stories"}
                 className={`${navigationMenuTriggerStyle()} tracking-wide !text-base`}
               >
-                Cerita Berbagi
+                Impact Stories
               </Link>
             </NavigationMenuItem>
-          )}
+          )} */}
           {/* Pillar Stop */}
           {/* Email Start */}
           <NavigationMenuItem>
